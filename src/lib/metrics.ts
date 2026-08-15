@@ -199,6 +199,66 @@ export async function parseUploadedFont(
 const pct = (v: number, digits = 4) => `${(v * 100).toFixed(digits)}%`;
 
 /**
+ * Compute optimal, gapless font-weight ranges for any set of physical font weight variants
+ */
+export function computeWeightRanges(
+	weights?: FontWeightVariant[]
+): { variant: FontWeightVariant; weightStr: string }[] {
+	if (!weights || weights.length === 0) {
+		return [];
+	}
+
+	if (weights.length === 1) {
+		return [{ variant: weights[0], weightStr: '100 900' }];
+	}
+
+	const sorted = [...weights].sort((a, b) => a.weight - b.weight);
+	const standardWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+	const presentWeights = new Set(sorted.map((w) => w.weight));
+	const hasAllStandard = standardWeights.every((sw) => presentWeights.has(sw));
+
+	if (hasAllStandard && sorted.length >= 9) {
+		return sorted.map((v) => ({ variant: v, weightStr: `${v.weight}` }));
+	}
+
+	const result: { variant: FontWeightVariant; weightStr: string }[] = [];
+	for (let i = 0; i < sorted.length; i++) {
+		const v = sorted[i];
+		const isFirst = i === 0;
+		const isLast = i === sorted.length - 1;
+
+		let minW: number;
+		let maxW: number;
+
+		if (isFirst) {
+			minW = 100;
+		} else {
+			const prevW = sorted[i - 1].weight;
+			if (prevW <= 400 && v.weight >= 600) {
+				minW = 501;
+			} else {
+				minW = Math.floor((prevW + v.weight) / 2) + 1;
+			}
+		}
+
+		if (isLast) {
+			maxW = 900;
+		} else {
+			const nextW = sorted[i + 1].weight;
+			if (v.weight <= 400 && nextW >= 600) {
+				maxW = 500;
+			} else {
+				maxW = Math.floor((v.weight + nextW) / 2);
+			}
+		}
+
+		const weightStr = minW === maxW ? `${minW}` : `${minW} ${maxW}`;
+		result.push({ variant: v, weightStr });
+	}
+	return result;
+}
+
+/**
  * Calculate Metric Overrides CSS based on exact bin/font-fallback/generate.ts logic
  */
 export function calculateAlignmentCss(target: CustomFont, base: CustomFont): GeneratedCssResult {
@@ -233,7 +293,8 @@ export function calculateAlignmentCss(target: CustomFont, base: CustomFont): Gen
 	const weightBlocks: string[] = [];
 
 	if (target.weights && target.weights.length > 0) {
-		for (const w of target.weights) {
+		const ranges = computeWeightRanges(target.weights);
+		for (const { variant: w, weightStr } of ranges) {
 			const localCandidates = [...new Set(w.local)];
 			const localSrc = localCandidates.map((n) => `local("${n}")`).join(', ');
 			const srcDecl = target.url ? `url("${target.url}"), ${localSrc}` : localSrc;
@@ -244,7 +305,7 @@ export function calculateAlignmentCss(target: CustomFont, base: CustomFont): Gen
 					`@font-face {`,
 					`  font-family: "${fallbackFamilyName}";`,
 					`  src: ${srcDecl};`,
-					`  font-weight: ${w.weight};`,
+					`  font-weight: ${weightStr};`,
 					`  size-adjust: ${pct(sizeAdjustRatio)};`,
 					`  ascent-override: ${pct(ascentOverrideRatio)};`,
 					`  descent-override: ${pct(descentOverrideRatio)};`,
@@ -265,6 +326,7 @@ export function calculateAlignmentCss(target: CustomFont, base: CustomFont): Gen
 				`@font-face {`,
 				`  font-family: "${fallbackFamilyName}";`,
 				`  src: ${srcDecl};`,
+				`  font-weight: 100 900;`,
 				`  size-adjust: ${pct(sizeAdjustRatio)};`,
 				`  ascent-override: ${pct(ascentOverrideRatio)};`,
 				`  descent-override: ${pct(descentOverrideRatio)};`,
