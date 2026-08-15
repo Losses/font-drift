@@ -1,5 +1,11 @@
 import opentype from 'opentype.js';
-import type { CustomFont, FallbackEntry, GeneratedCssResult, MetricsDb } from './types';
+import type {
+	CustomFont,
+	FallbackEntry,
+	FontWeightVariant,
+	GeneratedCssResult,
+	MetricsDb
+} from './types';
 import rawDb from './data/font-metrics.json';
 
 const metricsDb = rawDb as MetricsDb;
