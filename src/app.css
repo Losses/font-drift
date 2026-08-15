@@ -17,6 +17,10 @@
 	--bp-line-white: #ffffff;
 	--bp-grid-major: rgba(255, 255, 255, 0.35);
 	--bp-grid-minor: rgba(255, 255, 255, 0.15);
+
+	--glass-capsule-bg: rgba(255, 255, 255, 0.22);
+	--glass-button-bg: rgba(255, 255, 255, 0.2);
+	--glass-button-hover-bg: rgba(255, 255, 255, 0.32);
 }
 
 * {
@@ -152,7 +156,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	border: 1.5px solid rgba(255, 255, 255, 0.6);
-	background: rgba(255, 255, 255, 0.16);
+	background-color: var(--glass-button-bg) !important;
 	color: rgba(255, 255, 255, 0.95);
 	box-shadow:
 		0 calc(0.4 * var(--elevation-depth, 20) * 1px) calc(0.9 * var(--elevation-depth, 20) * 1px) 0
@@ -197,7 +201,7 @@ body {
 .crystal-button:hover,
 .GHTKO:hover {
 	--elevation-depth: 32;
-	background: rgba(255, 255, 255, 0.28);
+	background-color: var(--glass-button-hover-bg) !important;
 	border-color: rgba(255, 255, 255, 0.95);
 	color: #ffffff;
 	transform: translateY(-2px);
@@ -219,7 +223,7 @@ body {
 	justify-content: center;
 	white-space: nowrap !important;
 	flex-shrink: 0;
-	background: rgba(255, 255, 255, 0.15);
+	background-color: var(--glass-capsule-bg) !important;
 	backdrop-filter: blur(28px) saturate(180%);
 	-webkit-backdrop-filter: blur(28px) saturate(180%);
 	border: 2px solid rgba(255, 255, 255, 0.75);
@@ -298,9 +302,8 @@ body {
 	--elevation-depth: 48;
 	background: #ffffff;
 	color: #14486f;
+	padding: 24px;
 	border: 2px solid #195782;
-	border-radius: 0px !important;
-	padding: 32px;
 	box-shadow:
 		0 calc(0.4 * var(--elevation-depth, 48) * 1px) calc(0.9 * var(--elevation-depth, 48) * 1px) 0
 			rgba(
