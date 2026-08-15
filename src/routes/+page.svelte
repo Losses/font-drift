@@ -1,13 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { SvelteMap } from 'svelte/reactivity';
-	import type { CustomFont } from '$lib/types';
-	import {
-		INITIAL_FALLBACKS,
-		fallbackToCustomFont,
-		DEFAULT_BASE_FONT,
-		parseUploadedFont
-	} from '$lib/metrics';
+	import type { CustomFont, BakedCharMetrics } from '$lib/types';
+	import { INITIAL_FALLBACKS, fallbackToCustomFont, parseUploadedFont } from '$lib/metrics';
 	import { bakeFontSet } from '$lib/baker';
 	import { getScreenEdgeRatios } from '$lib/utils';
 
@@ -26,7 +21,7 @@
 	let customFonts = $state<CustomFont[]>([]);
 	let allFonts = $derived([...customFonts, ...premeasuredFonts]);
 
-	let masterManifest = $state<Record<string, any>>({});
+	let masterManifest = $state<Record<string, BakedCharMetrics[]>>({});
 
 	// Base Font is the user's chosen standard webfont; Target Font is the fallback font candidate
 	let baseFont = $state<CustomFont | null>(null);
@@ -57,10 +52,14 @@
 	let winHeight = $state(1080);
 
 	function getSlug(family: string) {
-		return family
+		const raw = family
 			.toLowerCase()
 			.replace(/[^a-z0-9]+/g, '-')
 			.replace(/^-|-$/g, '');
+		if (raw === 'pingfang-sc') return 'pingfang-sc-regular';
+		if (raw === 'opposans') return 'opposans-r';
+		if (raw === 'vivo-sans') return 'vivo-sans-global';
+		return raw;
 	}
 
 	// Persistent SvelteMap image memory cache to prevent GC eviction & satisfy ESLint Svelte reactivity
@@ -70,7 +69,7 @@
 	function preloadAllBakedImages() {
 		if (typeof window === 'undefined') return;
 		const chars = ['放', '轻', '松'];
-		const fontsToPreload = [DEFAULT_BASE_FONT, ...premeasuredFonts];
+		const fontsToPreload = premeasuredFonts;
 
 		fontsToPreload.forEach((font) => {
 			const slug = getSlug(font.family);

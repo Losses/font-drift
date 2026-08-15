@@ -29,9 +29,16 @@ export interface TableMetrics {
 	nameRecords: { nameID: number; value: string }[];
 }
 
+export interface FontWeightVariant {
+	weight: number;
+	name?: string;
+	local: string[];
+}
+
 export interface FallbackEntry {
 	family: string;
 	local: string[];
+	weights?: FontWeightVariant[];
 	file: string;
 	tables: TableMetrics;
 	browser: BrowserMetrics;
@@ -51,6 +58,7 @@ export interface CustomFont {
 	url?: string;
 	arrayBuffer?: ArrayBuffer;
 	isCustom: boolean;
+	weights?: FontWeightVariant[];
 	/** Ordered local() candidate names (family / preferred family / full / PostScript, all locales) */
 	localNames?: string[];
 	unitsPerEm: number;

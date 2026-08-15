@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { CustomFont } from '$lib/types';
+	import type { CustomFont, BakedCharMetrics } from '$lib/types';
 	import { calculateAlignmentCss } from '$lib/metrics';
 
 	import { bakeCharacter } from '$lib/baker';
@@ -10,31 +10,10 @@
 	import SideCalloutCard from './SideCalloutCard.svelte';
 	import SpecificationCard from './SpecificationCard.svelte';
 
-	interface BakedMetrics {
-		fontFamily: string;
-		char: string;
-		fontSize: number;
-		advanceWidth: number;
-		fontBoundingBoxAscent: number;
-		fontBoundingBoxDescent: number;
-		actualBoundingBoxAscent: number;
-		actualBoundingBoxDescent: number;
-		actualBoundingBoxLeft: number;
-		actualBoundingBoxRight: number;
-		pixelBox: {
-			x: number;
-			y: number;
-			width: number;
-			height: number;
-		};
-		pngFileName?: string;
-		dataUrl?: string;
-	}
-
 	let {
 		targetFont = $bindable<CustomFont>(),
 		baseFont = $bindable<CustomFont>(),
-		masterManifest = $bindable<Record<string, BakedMetrics[]>>({}),
+		masterManifest = $bindable<Record<string, BakedCharMetrics[]>>({}),
 		fontSize = 64,
 		text = '放轻松',
 		showBaselines = true,
@@ -43,7 +22,7 @@
 	}: {
 		targetFont: CustomFont;
 		baseFont: CustomFont;
-		masterManifest?: Record<string, BakedMetrics[]>;
+		masterManifest?: Record<string, BakedCharMetrics[]>;
 		fontSize: number;
 		text: string;
 		showBaselines: boolean;
@@ -72,13 +51,17 @@
 	let alignmentCss = $derived(calculateAlignmentCss(targetFont, baseFont));
 
 	// Plain JS Map for client-side dynamically baked glyphs (NOT a Svelte $state signal)
-	const clientGlyphCache = new Map<string, BakedMetrics>();
+	const clientGlyphCache = new Map<string, BakedCharMetrics>();
 
 	function getSlug(family: string) {
-		return family
+		const raw = family
 			.toLowerCase()
 			.replace(/[^a-z0-9]+/g, '-')
 			.replace(/^-|-$/g, '');
+		if (raw === 'pingfang-sc') return 'pingfang-sc-regular';
+		if (raw === 'opposans') return 'opposans-r';
+		if (raw === 'vivo-sans') return 'vivo-sans-global';
+		return raw;
 	}
 
 	function getBakedGlyphData(fontObj: CustomFont, size: number, displayCharText: string) {

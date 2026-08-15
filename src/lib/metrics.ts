@@ -41,7 +41,16 @@ export function collectLocalNames(parsed: opentype.Font): string[] {
 }
 
 export function findFallbackEntry(family: string): FallbackEntry | undefined {
-	return metricsDb.fallbacks.find((f) => f.family.toLowerCase() === family.toLowerCase());
+	const normalized = family
+		.toLowerCase()
+		.replace(/\s+regular$/i, '')
+		.trim();
+	return metricsDb.fallbacks.find(
+		(f) =>
+			f.family.toLowerCase() === family.toLowerCase() ||
+			f.family.toLowerCase() === normalized ||
+			f.family.toLowerCase().replace(/\s+regular$/i, '') === normalized
+	);
 }
 
 /**
@@ -52,17 +61,18 @@ export function fallbackToCustomFont(entry: FallbackEntry): CustomFont {
 	const b = entry.browser;
 
 	return {
-		id: `db-${entry.family}`,
+		id: `db-${entry.family.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
 		name: entry.family,
 		family: entry.family,
 		isCustom: false,
+		weights: entry.weights ? [...entry.weights] : undefined,
 		localNames: entry.local.length > 0 ? [...entry.local] : [entry.family],
 		unitsPerEm: t.unitsPerEm || 1000,
-		ascender: t.os2?.typoAscender ?? t.hhea.ascender ?? 880,
-		descender: t.os2?.typoDescender ?? t.hhea.descender ?? -120,
+		ascender: t.os2?.typoAscender ?? t.hhea?.ascender ?? 880,
+		descender: t.os2?.typoDescender ?? t.hhea?.descender ?? -120,
 		capHeight: Math.round((t.unitsPerEm || 1000) * 0.7),
 		xHeight: Math.round((t.unitsPerEm || 1000) * 0.5),
-		lineGap: t.hhea.lineGap ?? t.os2?.typoLineGap ?? 0,
+		lineGap: t.hhea?.lineGap ?? t.os2?.typoLineGap ?? 0,
 		browserAscent: b.ascent,
 		browserDescent: b.descent,
 		browserInkAscent: b.inkAscent,
@@ -71,23 +81,6 @@ export function fallbackToCustomFont(entry: FallbackEntry): CustomFont {
 		cjkWidth: b.widths.cjk ? (b.widths.cjk > 200 ? b.widths.cjk / 10 : b.widths.cjk) : 100.0
 	};
 }
-
-const DEFAULT_BASE_FAMILY = 'PingFang SC Regular';
-
-const defaultBaseEntry = findFallbackEntry(DEFAULT_BASE_FAMILY) ?? metricsDb.fallbacks[0];
-
-if (!defaultBaseEntry) {
-	throw new Error('font-metrics.json contains no fallback entries; cannot derive base font');
-}
-
-/**
- * Default reference base font, always derived from the real measured
- * database entry (never hardcoded metrics).
- */
-export const DEFAULT_BASE_FONT: CustomFont = {
-	...fallbackToCustomFont(defaultBaseEntry),
-	id: 'base-default'
-};
 
 /**
  * Measure in-browser canvas TextMetrics & DOM line box height for any loaded font family
@@ -105,12 +98,12 @@ export function measureFontInBrowser(
 } {
 	if (typeof document === 'undefined') {
 		return {
-			ascent: DEFAULT_BASE_FONT.browserAscent,
-			descent: DEFAULT_BASE_FONT.browserDescent,
-			inkAscent: DEFAULT_BASE_FONT.browserInkAscent,
-			inkDescent: DEFAULT_BASE_FONT.browserInkDescent,
-			lineBox: DEFAULT_BASE_FONT.lineBox,
-			cjkWidth: DEFAULT_BASE_FONT.cjkWidth
+			ascent: emPx * 0.88,
+			descent: emPx * 0.12,
+			inkAscent: emPx * 0.84,
+			inkDescent: emPx * 0.26,
+			lineBox: emPx,
+			cjkWidth: emPx
 		};
 	}
 
@@ -208,10 +201,7 @@ const pct = (v: number, digits = 4) => `${(v * 100).toFixed(digits)}%`;
 /**
  * Calculate Metric Overrides CSS based on exact bin/font-fallback/generate.ts logic
  */
-export function calculateAlignmentCss(
-	target: CustomFont,
-	base: CustomFont = DEFAULT_BASE_FONT
-): GeneratedCssResult {
+export function calculateAlignmentCss(target: CustomFont, base: CustomFont): GeneratedCssResult {
 	const k = base.cjkWidth > 0 && target.cjkWidth > 0 ? base.cjkWidth / target.cjkWidth : 1.0;
 
 	// Base font native line gap in em (measured line box minus ascent and descent)
@@ -234,31 +224,58 @@ export function calculateAlignmentCss(
 
 	const fallbackEntry = findFallbackEntry(target.family);
 
-	// Emit every known local() alias (family / preferred family / full / PostScript,
-	// all locales) because local() matching is platform-specific: a name that resolves
-	// on one OS/font stack may silently fail on another.
-	const localCandidates = [...new Set([target.family, ...(target.localNames ?? [])])];
-	const localSrc = localCandidates.map((n) => `local("${n}")`).join(', ');
-	const srcDecl = target.url ? `url("${target.url}"), ${localSrc}` : localSrc;
-
 	const fallbackFamilyName = `${base.family.replace(/\s+Regular$/i, '')} Fallback ${target.family}`;
 
 	const tableNote = target.unitsPerEm
 		? ` Tables: upm ${target.unitsPerEm}, hhea ${target.ascender}/${target.descender}/${target.lineGap}.`
 		: '';
 
-	const fontFaceCss = [
-		`/* ${target.family} (${fallbackEntry?.file || 'custom'}).${tableNote} */`,
-		`@font-face {`,
-		`  font-family: "${fallbackFamilyName}";`,
-		`  src: ${srcDecl};`,
-		`  size-adjust: ${pct(sizeAdjustRatio)};`,
-		`  ascent-override: ${pct(ascentOverrideRatio)};`,
-		`  descent-override: ${pct(descentOverrideRatio)};`,
-		`  line-gap-override: ${pct(lineGapOverrideRatio)};`,
-		`  font-display: block;`,
-		`}`
-	].join('\n');
+	const weightBlocks: string[] = [];
+
+	if (target.weights && target.weights.length > 0) {
+		for (const w of target.weights) {
+			const localCandidates = [...new Set(w.local)];
+			const localSrc = localCandidates.map((n) => `local("${n}")`).join(', ');
+			const srcDecl = target.url ? `url("${target.url}"), ${localSrc}` : localSrc;
+
+			weightBlocks.push(
+				[
+					`/* ${target.family} ${w.name || w.weight} (${fallbackEntry?.file || 'custom'}).${tableNote} */`,
+					`@font-face {`,
+					`  font-family: "${fallbackFamilyName}";`,
+					`  src: ${srcDecl};`,
+					`  font-weight: ${w.weight};`,
+					`  size-adjust: ${pct(sizeAdjustRatio)};`,
+					`  ascent-override: ${pct(ascentOverrideRatio)};`,
+					`  descent-override: ${pct(descentOverrideRatio)};`,
+					`  line-gap-override: ${pct(lineGapOverrideRatio)};`,
+					`  font-display: block;`,
+					`}`
+				].join('\n')
+			);
+		}
+	} else {
+		const localCandidates = [...new Set([target.family, ...(target.localNames ?? [])])];
+		const localSrc = localCandidates.map((n) => `local("${n}")`).join(', ');
+		const srcDecl = target.url ? `url("${target.url}"), ${localSrc}` : localSrc;
+
+		weightBlocks.push(
+			[
+				`/* ${target.family} (${fallbackEntry?.file || 'custom'}).${tableNote} */`,
+				`@font-face {`,
+				`  font-family: "${fallbackFamilyName}";`,
+				`  src: ${srcDecl};`,
+				`  size-adjust: ${pct(sizeAdjustRatio)};`,
+				`  ascent-override: ${pct(ascentOverrideRatio)};`,
+				`  descent-override: ${pct(descentOverrideRatio)};`,
+				`  line-gap-override: ${pct(lineGapOverrideRatio)};`,
+				`  font-display: block;`,
+				`}`
+			].join('\n')
+		);
+	}
+
+	const fontFaceCss = weightBlocks.join('\n\n');
 
 	const tonskyFlexCss = [
 		`/* Metric-compatible font-family stack */`,
@@ -291,7 +308,7 @@ export function calculateAlignmentCss(
  * Generates complete, stable CSS specification file aligning all system fallbacks to the given BASE font
  */
 export function generateAllFontsCssPackage(
-	base: CustomFont = DEFAULT_BASE_FONT,
+	base: CustomFont,
 	customFonts: CustomFont[] = []
 ): string {
 	const allFonts = [...customFonts, ...INITIAL_FALLBACKS.map(fallbackToCustomFont)];

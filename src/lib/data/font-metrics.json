@@ -84,10 +84,28 @@
 					"latinUpper": 629.00390625,
 					"digits": 586.42578125
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": ["Microsoft YaHei", "微软雅黑", "MicrosoftYaHei", "MicrosoftYaHeiRegular"]
+				},
+				{
+					"weight": 700,
+					"name": "Bold",
+					"local": [
+						"Microsoft YaHei Bold",
+						"微软雅黑 Bold",
+						"微软雅黑 粗体",
+						"MicrosoftYaHeiBold",
+						"MicrosoftYaHei-Bold"
+					]
+				}
+			]
 		},
 		{
-			"family": "PingFang SC Regular",
+			"family": "PingFang SC",
 			"local": [
 				"PingFang SC",
 				"苹方",
@@ -173,7 +191,84 @@
 					"latinUpper": 591.4994506835938,
 					"digits": 599.9993896484375
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 100,
+					"name": "Ultralight",
+					"local": [
+						"PingFang SC Ultralight",
+						"PingFangSC-Ultralight",
+						".PingFang SC Ultralight",
+						".PingFang-SC-Ultralight",
+						"苹方-简 极细体",
+						"苹方 极细体"
+					]
+				},
+				{
+					"weight": 200,
+					"name": "Thin",
+					"local": [
+						"PingFang SC Thin",
+						"PingFangSC-Thin",
+						".PingFang SC Thin",
+						".PingFang-SC-Thin",
+						"苹方-简 纤细体",
+						"苹方 纤细体"
+					]
+				},
+				{
+					"weight": 300,
+					"name": "Light",
+					"local": [
+						"PingFang SC Light",
+						"PingFangSC-Light",
+						".PingFang SC Light",
+						".PingFang-SC-Light",
+						"苹方-简 细体",
+						"苹方 细体"
+					]
+				},
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": [
+						"PingFang SC",
+						"PingFang SC Regular",
+						"PingFangSC-Regular",
+						".PingFang SC",
+						".PingFang SC Regular",
+						".PingFang-SC-Regular",
+						"苹方-简",
+						"苹方",
+						"苹方 常规"
+					]
+				},
+				{
+					"weight": 500,
+					"name": "Medium",
+					"local": [
+						"PingFang SC Medium",
+						"PingFangSC-Medium",
+						".PingFang SC Medium",
+						".PingFang-SC-Medium",
+						"苹方-简 中黑",
+						"苹方 中等"
+					]
+				},
+				{
+					"weight": 600,
+					"name": "Semibold",
+					"local": [
+						"PingFang SC Semibold",
+						"PingFangSC-Semibold",
+						".PingFang SC Semibold",
+						".PingFang-SC-Semibold",
+						"苹方-简 中粗",
+						"苹方 中粗体"
+					]
+				}
+			]
 		},
 		{
 			"family": "MiSans",
@@ -262,7 +357,54 @@
 					"latinUpper": 582.7994384765625,
 					"digits": 555.2994384765625
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 100,
+					"name": "Thin",
+					"local": ["MiSans Thin", "MiSans-Thin"]
+				},
+				{
+					"weight": 200,
+					"name": "ExtraLight",
+					"local": ["MiSans ExtraLight", "MiSans-ExtraLight"]
+				},
+				{
+					"weight": 300,
+					"name": "Light",
+					"local": ["MiSans Light", "MiSans-Light"]
+				},
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": ["MiSans", "MiSans Normal", "MiSans Regular", "MiSans-Normal", "MiSans-Regular"]
+				},
+				{
+					"weight": 500,
+					"name": "Medium",
+					"local": ["MiSans Medium", "MiSans-Medium"]
+				},
+				{
+					"weight": 600,
+					"name": "Demibold",
+					"local": ["MiSans Demibold", "MiSans SemiBold", "MiSans-Demibold", "MiSans-SemiBold"]
+				},
+				{
+					"weight": 700,
+					"name": "Bold",
+					"local": ["MiSans Bold", "MiSans-Bold"]
+				},
+				{
+					"weight": 800,
+					"name": "Heavy",
+					"local": ["MiSans Heavy", "MiSans-Heavy"]
+				},
+				{
+					"weight": 900,
+					"name": "Black",
+					"local": ["MiSans Black", "MiSans-Black"]
+				}
+			]
 		},
 		{
 			"family": "HarmonyOS Sans SC",
@@ -343,10 +485,47 @@
 					"latinUpper": 585.7994384765625,
 					"digits": 569.9993896484375
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 100,
+					"name": "Thin",
+					"local": ["HarmonyOS Sans SC Thin", "HarmonyOS_Sans_SC_Thin", "HarmonyOS Sans SC T"]
+				},
+				{
+					"weight": 300,
+					"name": "Light",
+					"local": ["HarmonyOS Sans SC Light", "HarmonyOS_Sans_SC_Light", "HarmonyOS Sans SC L"]
+				},
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": [
+						"HarmonyOS Sans SC",
+						"HarmonyOS Sans SC Regular",
+						"HarmonyOS_Sans_SC",
+						"HarmonyOS_Sans_SC_Regular"
+					]
+				},
+				{
+					"weight": 500,
+					"name": "Medium",
+					"local": ["HarmonyOS Sans SC Medium", "HarmonyOS_Sans_SC_Medium", "HarmonyOS Sans SC M"]
+				},
+				{
+					"weight": 700,
+					"name": "Bold",
+					"local": ["HarmonyOS Sans SC Bold", "HarmonyOS_Sans_SC_Bold", "HarmonyOS Sans SC B"]
+				},
+				{
+					"weight": 900,
+					"name": "Black",
+					"local": ["HarmonyOS Sans SC Black", "HarmonyOS_Sans_SC_Black", "HarmonyOS Sans SC H"]
+				}
+			]
 		},
 		{
-			"family": "OPPOSans R",
+			"family": "OPPOSans",
 			"local": ["OPPOSans", "OPPOSans R", "OPPOSans-R"],
 			"file": "OPPOSansRegular.ttf",
 			"tables": {
@@ -440,7 +619,34 @@
 					"latinUpper": 609.2994384765625,
 					"digits": 590.5994873046875
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 300,
+					"name": "Light",
+					"local": ["OPPOSans L", "OPPOSans Light", "OPPOSans-L", "OPPOSans-Light"]
+				},
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": ["OPPOSans", "OPPOSans R", "OPPOSans Regular", "OPPOSans-R", "OPPOSans-Regular"]
+				},
+				{
+					"weight": 500,
+					"name": "Medium",
+					"local": ["OPPOSans M", "OPPOSans Medium", "OPPOSans-M", "OPPOSans-Medium"]
+				},
+				{
+					"weight": 700,
+					"name": "Bold",
+					"local": ["OPPOSans B", "OPPOSans Bold", "OPPOSans-B", "OPPOSans-Bold"]
+				},
+				{
+					"weight": 900,
+					"name": "Heavy",
+					"local": ["OPPOSans H", "OPPOSans Heavy", "OPPOSans-H", "OPPOSans-Heavy"]
+				}
+			]
 		},
 		{
 			"family": "HONOR Sans",
@@ -525,10 +731,93 @@
 					"latinUpper": 578.9994506835938,
 					"digits": 572.9993896484375
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 100,
+					"name": "Thin",
+					"local": ["HONOR Sans Thin", "HONORSans-Thin", "HONOR Sans CN Thin", "HONORSansCN-Thin"]
+				},
+				{
+					"weight": 200,
+					"name": "ExtraLight",
+					"local": [
+						"HONOR Sans ExtraLight",
+						"HONORSans-ExtraLight",
+						"HONOR Sans CN ExtraLight",
+						"HONORSansCN-ExtraLight"
+					]
+				},
+				{
+					"weight": 300,
+					"name": "Light",
+					"local": [
+						"HONOR Sans Light",
+						"HONORSans-Light",
+						"HONOR Sans CN Light",
+						"HONORSansCN-Light"
+					]
+				},
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": [
+						"HONOR Sans",
+						"HONOR Sans Regular",
+						"HONORSans-Regular",
+						"HONOR Sans CN",
+						"HONORSansCN-Regular"
+					]
+				},
+				{
+					"weight": 500,
+					"name": "Medium",
+					"local": [
+						"HONOR Sans Medium",
+						"HONORSans-Medium",
+						"HONOR Sans CN Medium",
+						"HONORSansCN-Medium"
+					]
+				},
+				{
+					"weight": 600,
+					"name": "DemiBold",
+					"local": [
+						"HONOR Sans DemiBold",
+						"HONORSans-DemiBold",
+						"HONOR Sans CN DemiBold",
+						"HONORSansCN-DemiBold"
+					]
+				},
+				{
+					"weight": 700,
+					"name": "Bold",
+					"local": ["HONOR Sans Bold", "HONORSans-Bold", "HONOR Sans CN Bold", "HONORSansCN-Bold"]
+				},
+				{
+					"weight": 800,
+					"name": "ExtraBold",
+					"local": [
+						"HONOR Sans ExtraBold",
+						"HONORSans-ExtraBold",
+						"HONOR Sans CN ExtraBold",
+						"HONORSansCN-ExtraBold"
+					]
+				},
+				{
+					"weight": 900,
+					"name": "Heavy",
+					"local": [
+						"HONOR Sans Heavy",
+						"HONORSans-Heavy",
+						"HONOR Sans CN Heavy",
+						"HONORSansCN-Heavy"
+					]
+				}
+			]
 		},
 		{
-			"family": "vivo Sans Global",
+			"family": "vivo Sans",
 			"local": ["vivo Sans Global", "vivo Sans Global Regular", "vivoSansGlobal-Regular"],
 			"file": "vivoSansGlobal-Regular.ttf",
 			"tables": {
@@ -594,7 +883,101 @@
 					"latinUpper": 613.099365234375,
 					"digits": 561.3994140625
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 100,
+					"name": "Thin",
+					"local": [
+						"vivo Sans Thin",
+						"vivoSans-Thin",
+						"vivo Sans Global Thin",
+						"vivoSansGlobal-Thin"
+					]
+				},
+				{
+					"weight": 200,
+					"name": "ExtraLight",
+					"local": [
+						"vivo Sans ExtraLight",
+						"vivoSans-ExtraLight",
+						"vivo Sans Global Extralight",
+						"vivoSansGlobal-Extralight"
+					]
+				},
+				{
+					"weight": 300,
+					"name": "Light",
+					"local": [
+						"vivo Sans Light",
+						"vivoSans-Light",
+						"vivo Sans Global Light",
+						"vivoSansGlobal-Light"
+					]
+				},
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": [
+						"vivo Sans",
+						"vivo Sans Regular",
+						"vivoSans-Regular",
+						"vivo Sans Global",
+						"vivo Sans Global Regular",
+						"vivoSansGlobal-Regular"
+					]
+				},
+				{
+					"weight": 500,
+					"name": "Medium",
+					"local": [
+						"vivo Sans Medium",
+						"vivoSans-Medium",
+						"vivo Sans Global Medium",
+						"vivoSansGlobal-Medium"
+					]
+				},
+				{
+					"weight": 600,
+					"name": "DemiBold",
+					"local": [
+						"vivo Sans DemiBold",
+						"vivoSans-DemiBold",
+						"vivo Sans Global Demibold",
+						"vivoSansGlobal-Demibold"
+					]
+				},
+				{
+					"weight": 700,
+					"name": "Bold",
+					"local": [
+						"vivo Sans Bold",
+						"vivoSans-Bold",
+						"vivo Sans Global Bold",
+						"vivoSansGlobal-Bold"
+					]
+				},
+				{
+					"weight": 800,
+					"name": "ExtraBold",
+					"local": [
+						"vivo Sans ExtraBold",
+						"vivoSans-ExtraBold",
+						"vivo Sans Global Extrabold",
+						"vivoSansGlobal-Extrabold"
+					]
+				},
+				{
+					"weight": 900,
+					"name": "Heavy",
+					"local": [
+						"vivo Sans Heavy",
+						"vivoSans-Heavy",
+						"vivo Sans Global Heavy",
+						"vivoSansGlobal-Heavy"
+					]
+				}
+			]
 		},
 		{
 			"family": "Heiti SC",
@@ -703,7 +1086,27 @@
 					"latinUpper": 628.099365234375,
 					"digits": 553.99951171875
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 300,
+					"name": "Light",
+					"local": ["Heiti SC Light", "黑體-簡 細體", "黑体-简 细体", "STHeitiSC-Light"]
+				},
+				{
+					"weight": 500,
+					"name": "Medium",
+					"local": [
+						"Heiti SC",
+						"Heiti SC Medium",
+						"黑體-簡",
+						"黑体-简",
+						"黑體-簡 中黑",
+						"黑体-简 中等",
+						"STHeitiSC-Medium"
+					]
+				}
+			]
 		},
 		{
 			"family": "Hiragino Sans GB",
@@ -800,7 +1203,19 @@
 					"latinUpper": 646.099365234375,
 					"digits": 657.3993530273438
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 400,
+					"name": "W3",
+					"local": ["Hiragino Sans GB", "Hiragino Sans GB W3", "HiraginoSansGB-W3"]
+				},
+				{
+					"weight": 700,
+					"name": "W6",
+					"local": ["Hiragino Sans GB W6", "HiraginoSansGB-W6"]
+				}
+			]
 		},
 		{
 			"family": "Heiti TC",
@@ -905,7 +1320,27 @@
 					"latinUpper": 628.099365234375,
 					"digits": 553.99951171875
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 300,
+					"name": "Light",
+					"local": ["Heiti TC Light", "黑體-繁 細體", "黑体-繁 细体", "STHeitiTC-Light"]
+				},
+				{
+					"weight": 500,
+					"name": "Medium",
+					"local": [
+						"Heiti TC",
+						"Heiti TC Medium",
+						"黑體-繁",
+						"黑体-繁",
+						"黑體-繁 中黑",
+						"黑体-繁 中等",
+						"STHeitiTC-Medium"
+					]
+				}
+			]
 		},
 		{
 			"family": "STXihei",
@@ -982,7 +1417,14 @@
 					"latinUpper": 628.099365234375,
 					"digits": 553.99951171875
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 300,
+					"name": "Regular",
+					"local": ["STXihei", "华文细黑", "ＳＴＸｉｈｅｉ"]
+				}
+			]
 		},
 		{
 			"family": "LiHei Pro",
@@ -1059,7 +1501,14 @@
 					"latinUpper": 627.2993774414062,
 					"digits": 649.9993896484375
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 500,
+					"name": "Medium",
+					"local": ["LiHei Pro", "儷黑 Pro", "LiHeiPro"]
+				}
+			]
 		},
 		{
 			"family": "Lantinghei SC",
@@ -1156,7 +1605,37 @@
 					"latinUpper": 718.359375,
 					"digits": 650.390625
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 200,
+					"name": "Extralight",
+					"local": [
+						"Lantinghei SC Extralight",
+						"兰亭黑-简 特细",
+						"蘭亭黑-簡 特細",
+						"FZLTXHK--GBK1-0"
+					]
+				},
+				{
+					"weight": 600,
+					"name": "Demibold",
+					"local": [
+						"Lantinghei SC",
+						"Lantinghei SC Demibold",
+						"兰亭黑-简",
+						"蘭亭黑-簡",
+						"兰亭黑-简 中黑",
+						"蘭亭黑-簡 中黑",
+						"FZLTZHK--GBK1-0"
+					]
+				},
+				{
+					"weight": 900,
+					"name": "Heavy",
+					"local": ["Lantinghei SC Heavy", "兰亭黑-简 特黑", "蘭亭黑-簡 特黑", "FZLTTHK--GBK1-0"]
+				}
+			]
 		},
 		{
 			"family": "Microsoft JhengHei",
@@ -1245,7 +1724,30 @@
 					"latinUpper": 620.703125,
 					"digits": 579.58984375
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": [
+						"Microsoft JhengHei",
+						"微軟正黑體",
+						"MicrosoftJhengHei",
+						"MicrosoftJhengHeiRegular"
+					]
+				},
+				{
+					"weight": 700,
+					"name": "Bold",
+					"local": [
+						"Microsoft JhengHei Bold",
+						"微軟正黑體 Bold",
+						"微軟正黑體 粗體",
+						"MicrosoftJhengHeiBold",
+						"MicrosoftJhengHei-Bold"
+					]
+				}
+			]
 		},
 		{
 			"family": "SimHei",
@@ -1322,7 +1824,14 @@
 					"latinUpper": 500,
 					"digits": 500
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": ["SimHei", "黑体"]
+				}
+			]
 		},
 		{
 			"family": "Noto Sans SC",
@@ -1375,7 +1884,54 @@
 					"latinUpper": 576.4994506835938,
 					"digits": 554.99951171875
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 100,
+					"name": "Thin",
+					"local": ["Noto Sans SC Thin", "NotoSansSC-Thin"]
+				},
+				{
+					"weight": 200,
+					"name": "ExtraLight",
+					"local": ["Noto Sans SC ExtraLight", "NotoSansSC-ExtraLight"]
+				},
+				{
+					"weight": 300,
+					"name": "Light",
+					"local": ["Noto Sans SC Light", "NotoSansSC-Light"]
+				},
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": ["Noto Sans SC", "Noto Sans SC Regular", "NotoSansSC-Regular"]
+				},
+				{
+					"weight": 500,
+					"name": "Medium",
+					"local": ["Noto Sans SC Medium", "NotoSansSC-Medium"]
+				},
+				{
+					"weight": 600,
+					"name": "SemiBold",
+					"local": ["Noto Sans SC SemiBold", "NotoSansSC-SemiBold"]
+				},
+				{
+					"weight": 700,
+					"name": "Bold",
+					"local": ["Noto Sans SC Bold", "NotoSansSC-Bold"]
+				},
+				{
+					"weight": 800,
+					"name": "ExtraBold",
+					"local": ["Noto Sans SC ExtraBold", "NotoSansSC-ExtraBold"]
+				},
+				{
+					"weight": 900,
+					"name": "Black",
+					"local": ["Noto Sans SC Black", "NotoSansSC-Black"]
+				}
+			]
 		},
 		{
 			"family": "Source Han Sans SC",
@@ -1436,7 +1992,54 @@
 					"latinUpper": 577.2994384765625,
 					"digits": 554.99951171875
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 200,
+					"name": "ExtraLight",
+					"local": [
+						"Source Han Sans SC ExtraLight",
+						"SourceHanSansSC-ExtraLight",
+						"思源黑体 ExtraLight"
+					]
+				},
+				{
+					"weight": 300,
+					"name": "Light",
+					"local": ["Source Han Sans SC Light", "SourceHanSansSC-Light", "思源黑体 Light"]
+				},
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": [
+						"Source Han Sans SC",
+						"Source Han Sans SC Regular",
+						"SourceHanSansSC-Regular",
+						"思源黑体",
+						"思源黑体 Regular"
+					]
+				},
+				{
+					"weight": 500,
+					"name": "Medium",
+					"local": ["Source Han Sans SC Medium", "SourceHanSansSC-Medium", "思源黑体 Medium"]
+				},
+				{
+					"weight": 600,
+					"name": "SemiBold",
+					"local": ["Source Han Sans SC SemiBold", "SourceHanSansSC-SemiBold", "思源黑体 SemiBold"]
+				},
+				{
+					"weight": 700,
+					"name": "Bold",
+					"local": ["Source Han Sans SC Bold", "SourceHanSansSC-Bold", "思源黑体 Bold"]
+				},
+				{
+					"weight": 900,
+					"name": "Heavy",
+					"local": ["Source Han Sans SC Heavy", "SourceHanSansSC-Heavy", "思源黑体 Heavy"]
+				}
+			]
 		},
 		{
 			"family": "WenQuanYi Micro Hei",
@@ -1541,7 +2144,14 @@
 					"latinUpper": 576.07421875,
 					"digits": 550.78125
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": ["WenQuanYi Micro Hei", "文泉驛微米黑", "文泉驿微米黑", "WenQuanYiMicroHei"]
+				}
+			]
 		},
 		{
 			"family": "WenQuanYi Zen Hei",
@@ -1646,7 +2256,14 @@
 					"latinUpper": 533.49609375,
 					"digits": 599.609375
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": ["WenQuanYi Zen Hei", "文泉驛正黑", "文泉驿正黑", "WenQuanYiZenHei"]
+				}
+			]
 		},
 		{
 			"family": "Droid Sans Fallback",
@@ -1711,7 +2328,14 @@
 					"latinUpper": 576.5625,
 					"digits": 550.78125
 				}
-			}
+			},
+			"weights": [
+				{
+					"weight": 400,
+					"name": "Regular",
+					"local": ["Droid Sans Fallback", "DroidSansFallback"]
+				}
+			]
 		}
 	],
 	"webfont": {
