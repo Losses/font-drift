@@ -19,7 +19,8 @@
 		leaderCapHeight,
 		leaderOptical,
 		leaderBaseline,
-		leaderDescender
+		leaderDescender,
+		showLeaders = true
 	}: {
 		xAscenderLeft: number;
 		xAscenderRight: number;
@@ -41,6 +42,7 @@
 		leaderOptical: string;
 		leaderBaseline: string;
 		leaderDescender: string;
+		showLeaders?: boolean;
 	} = $props();
 </script>
 
@@ -97,39 +99,41 @@
 	/>
 
 	<!-- 2. LEADER LINES OUTSIDE CAPSULE (CONNECTS DIRECTLY TO EXACT CARD OUTER BORDER) -->
-	<path d={leaderBaseline} fill="none" stroke="#ffffff" stroke-width="2" opacity="1.0" />
-	<path
-		d={leaderCapHeight}
-		fill="none"
-		stroke="#dbe8f8"
-		stroke-width="1.5"
-		stroke-dasharray="8 4"
-		opacity="0.85"
-	/>
-	<path
-		d={leaderAscender}
-		fill="none"
-		stroke="#bdd4f1"
-		stroke-width="1.2"
-		stroke-dasharray="4 4"
-		opacity="0.65"
-	/>
-	<path
-		d={leaderDescender}
-		fill="none"
-		stroke="#bdd4f1"
-		stroke-width="1.2"
-		stroke-dasharray="4 4"
-		opacity="0.65"
-	/>
-	<path
-		d={leaderOptical}
-		fill="none"
-		stroke="#dbe8f8"
-		stroke-width="1"
-		stroke-dasharray="2 4"
-		opacity="0.4"
-	/>
+	{#if showLeaders}
+		<path d={leaderBaseline} fill="none" stroke="#ffffff" stroke-width="2" opacity="1.0" />
+		<path
+			d={leaderCapHeight}
+			fill="none"
+			stroke="#dbe8f8"
+			stroke-width="1.5"
+			stroke-dasharray="8 4"
+			opacity="0.85"
+		/>
+		<path
+			d={leaderAscender}
+			fill="none"
+			stroke="#bdd4f1"
+			stroke-width="1.2"
+			stroke-dasharray="4 4"
+			opacity="0.65"
+		/>
+		<path
+			d={leaderDescender}
+			fill="none"
+			stroke="#bdd4f1"
+			stroke-width="1.2"
+			stroke-dasharray="4 4"
+			opacity="0.65"
+		/>
+		<path
+			d={leaderOptical}
+			fill="none"
+			stroke="#dbe8f8"
+			stroke-width="1"
+			stroke-dasharray="2 4"
+			opacity="0.4"
+		/>
+	{/if}
 </svg>
 
 <style>

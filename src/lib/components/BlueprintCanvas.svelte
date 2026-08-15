@@ -190,8 +190,6 @@
 	let descenderY = $derived(targetBaselineY + realDescenderPx);
 
 	// ROCK-SOLID UNIFORM CAPSULE CONTAINER DIMENSIONS:
-	// Computed from current fontSize and text length to comfortably fit ALL fonts in the system (including extreme script descenders)
-	// Guaranteed 100% stationary and stable when switching font families (Zero wriggling!)
 	let capsuleWidth = $derived(Math.max(440, Math.ceil(fontSize * text.length * 1.5 + 160)));
 	let capsuleHeight = $derived(Math.max(160, Math.ceil(fontSize * 2.2)));
 
@@ -235,6 +233,29 @@
 	let leftCardRightX = 200;
 	let rightCardLeftX = $derived(containerWidth - 200);
 
+	// DYNAMIC COLLISION DETECTION FOR NARROW SCREENS:
+	// Detects when the distance between capsule outer arc and side card is less than 50px
+	// Or when containerWidth < capsuleWidth + 560px
+	let isNarrowScreen = $derived(
+		containerWidth < capsuleWidth + 560 || xAscenderLeft - leftCardRightX < 50
+	);
+
+	let ascenderVal = $derived(
+		`+${(ascenderRatio * 100).toFixed(1)}% (${ascenderRatio.toFixed(2)} em)`
+	);
+	let capHeightVal = $derived(
+		`+${(capHeightRatio * 100).toFixed(1)}% (${capHeightRatio.toFixed(2)} em)`
+	);
+	let opticalVal = '0.0% (0.00 em)';
+	let baselineVal = $derived(
+		useMetricOverrides
+			? '0.0% (0.000 em)'
+			: `${(alignmentCss.cjkOffsetEm * 100).toFixed(1)}% (${alignmentCss.cjkOffsetEm.toFixed(3)} em)`
+	);
+	let descenderVal = $derived(
+		`-${(descenderRatio * 100).toFixed(1)}% (${descenderRatio.toFixed(2)} em)`
+	);
+
 	let yLeftCard1 = $derived(centerY - 100);
 	let yLeftCard2 = $derived(centerY - 20);
 	let yLeftCard3 = $derived(centerY + 60);
@@ -267,7 +288,7 @@
 		</style>
 	{/if}
 
-	<!-- Central Translucent Capsule Preview Container (Uniform & Rock-Solid Dimensional Stability) -->
+	<!-- Central Translucent Capsule Preview Container -->
 	<div
 		class="crystal-capsule capsule-box"
 		style="
@@ -313,52 +334,49 @@
 			{leaderOptical}
 			{leaderBaseline}
 			{leaderDescender}
+			showLeaders={!isNarrowScreen}
 		/>
 
-		<!-- SIDE CALLOUT LABELS (100% UNTAMPERED RAW METRICS) -->
-		<div class="callout-wrapper">
-			<SideCalloutCard
-				title="ASCENDER"
-				value="+{(ascenderRatio * 100).toFixed(1)}% ({ascenderRatio.toFixed(2)} em)"
-				isLeft={true}
-				topY={yLeftCard1}
-			/>
+		<!-- SIDE CALLOUT LABELS (AUTOMATICALLY HIDDEN ON NARROW SCREENS TO PREVENT Z-FOLD COLLISION) -->
+		{#if !isNarrowScreen}
+			<div class="callout-wrapper">
+				<SideCalloutCard title="ASCENDER" value={ascenderVal} isLeft={true} topY={yLeftCard1} />
 
-			<SideCalloutCard
-				title="CAP HEIGHT"
-				value="+{(capHeightRatio * 100).toFixed(1)}% ({capHeightRatio.toFixed(2)} em)"
-				isLeft={true}
-				topY={yLeftCard2}
-			/>
+				<SideCalloutCard title="CAP HEIGHT" value={capHeightVal} isLeft={true} topY={yLeftCard2} />
 
-			<SideCalloutCard
-				title="OPTICAL CENTER"
-				value="0.0% (0.00 em)"
-				isLeft={true}
-				topY={yLeftCard3}
-			/>
+				<SideCalloutCard
+					title="OPTICAL CENTER"
+					value={opticalVal}
+					isLeft={true}
+					topY={yLeftCard3}
+				/>
 
-			<SideCalloutCard
-				title="BASELINE"
-				value={useMetricOverrides
-					? '0.0% (0.000 em)'
-					: `${(alignmentCss.cjkOffsetEm * 100).toFixed(1)}% (${alignmentCss.cjkOffsetEm.toFixed(3)} em)`}
-				isLeft={false}
-				topY={yRightCard1}
-				isWhiteBorder={true}
-			/>
+				<SideCalloutCard
+					title="BASELINE"
+					value={baselineVal}
+					isLeft={false}
+					topY={yRightCard1}
+					isWhiteBorder={true}
+				/>
 
-			<SideCalloutCard
-				title="DESCENDER"
-				value="-{(descenderRatio * 100).toFixed(1)}% ({descenderRatio.toFixed(2)} em)"
-				isLeft={false}
-				topY={yRightCard2}
-			/>
-		</div>
+				<SideCalloutCard title="DESCENDER" value={descenderVal} isLeft={false} topY={yRightCard2} />
+			</div>
+		{/if}
 	{/if}
 
-	<!-- SPECIFICATION CARD COMPONENT -->
-	<SpecificationCard {targetFont} {baseFont} {fontSize} {alignmentCss} />
+	<!-- SPECIFICATION CARD COMPONENT (DYNAMICALLY MERGES METRIC LABELS ON NARROW SCREENS) -->
+	<SpecificationCard
+		{targetFont}
+		{baseFont}
+		{fontSize}
+		{alignmentCss}
+		{isNarrowScreen}
+		{ascenderVal}
+		{capHeightVal}
+		{opticalVal}
+		{baselineVal}
+		{descenderVal}
+	/>
 </div>
 
 <style>

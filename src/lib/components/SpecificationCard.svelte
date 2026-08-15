@@ -5,12 +5,24 @@
 		targetFont,
 		baseFont,
 		fontSize,
-		alignmentCss
+		alignmentCss,
+		isNarrowScreen = false,
+		ascenderVal = '',
+		capHeightVal = '',
+		opticalVal = '',
+		baselineVal = '',
+		descenderVal = ''
 	}: {
 		targetFont: CustomFont;
 		baseFont: CustomFont;
 		fontSize: number;
 		alignmentCss: GeneratedCssResult;
+		isNarrowScreen?: boolean;
+		ascenderVal?: string;
+		capHeightVal?: string;
+		opticalVal?: string;
+		baselineVal?: string;
+		descenderVal?: string;
 	} = $props();
 </script>
 
@@ -38,6 +50,30 @@
 					>{(alignmentCss.cjkOffsetEm * fontSize).toFixed(1)}px</span
 				>
 			</div>
+
+			<!-- MERGED CALLOUT METRICS FOR NARROW SCREENS (AUTOMATICALLY ACTIVATED WHEN SCREEN IS NARROW) -->
+			{#if isNarrowScreen}
+				<div class="card-row-item spec-row spec-row-divider">
+					<span class="text-label-muted">ASCENDER:</span>
+					<span class="spec-value text-label">{ascenderVal}</span>
+				</div>
+				<div class="card-row-item spec-row">
+					<span class="text-label-muted">CAP HEIGHT:</span>
+					<span class="spec-value text-label">{capHeightVal}</span>
+				</div>
+				<div class="card-row-item spec-row">
+					<span class="text-label-muted">OPTICAL CENTER:</span>
+					<span class="spec-value text-label">{opticalVal}</span>
+				</div>
+				<div class="card-row-item spec-row">
+					<span class="text-label-muted">BASELINE:</span>
+					<span class="spec-value text-label">{baselineVal}</span>
+				</div>
+				<div class="card-row-item spec-row">
+					<span class="text-label-muted">DESCENDER:</span>
+					<span class="spec-value text-label">{descenderVal}</span>
+				</div>
+			{/if}
 		</div>
 	</div>
 </div>
