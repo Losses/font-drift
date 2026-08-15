@@ -1,0 +1,342 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   AUTHENTIC ARCHITECTURAL BLUEPRINT DESIGN SYSTEM (Talos I Spec)
+   Paper Background: #205d8b (Vibrant Prussian Blueprint Blue)
+   Grid Lines: Crisp White/Ice Blue Grid (#dbe8f8 / rgba(255, 255, 255, 0.35))
+   Elevation Shadow: User Exact Elevation Depth Formula
+   ========================================================================== */
+
+:root {
+	--bp-paper-base: #205d8b;
+	--bp-paper-center: #195782;
+	--bp-paper-dark: #124065;
+
+	--bp-line-chalk: #dbe8f8;
+	--bp-line-ice: #bdd4f1;
+	--bp-line-white: #ffffff;
+	--bp-grid-major: rgba(255, 255, 255, 0.35);
+	--bp-grid-minor: rgba(255, 255, 255, 0.15);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: var(--bp-paper-base);
+	color: var(--bp-line-white);
+	font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', Consolas, Monaco, monospace;
+	user-select: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Page Outer Container with Strict 32px Outer Margin Padding */
+.page-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	padding: 32px;
+	box-sizing: border-box;
+	overflow: hidden;
+	background-color: var(--bp-paper-base);
+}
+
+@media (max-width: 768px) {
+	.page-container {
+		padding: 16px;
+	}
+}
+
+/* Crisp Blueprint Grid Layer */
+.blueprint-paper-bg {
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	background-color: #205d8b;
+	background-image:
+		linear-gradient(var(--bp-grid-major) 1px, transparent 1px),
+		linear-gradient(90deg, var(--bp-grid-major) 1px, transparent 1px),
+		linear-gradient(var(--bp-grid-minor) 1px, transparent 1px),
+		linear-gradient(90deg, var(--bp-grid-minor) 1px, transparent 1px),
+		radial-gradient(circle at center, rgba(40, 107, 158, 0.5) 0%, rgba(20, 64, 101, 0.8) 100%);
+	background-size:
+		80px 80px,
+		80px 80px,
+		16px 16px,
+		16px 16px,
+		100% 100%;
+	background-position:
+		-1px -1px,
+		-1px -1px,
+		-1px -1px,
+		-1px -1px,
+		0 0;
+	z-index: 0;
+}
+
+/* Landing Font Selection Layout */
+.landing-selection-wrapper {
+	position: relative;
+	z-index: 30;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.landing-selection-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 32px;
+	width: 100%;
+	max-width: 840px;
+	align-items: center;
+	justify-items: center;
+}
+
+@media (max-width: 768px) {
+	.landing-selection-grid {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+}
+
+/* Dropzone Upload Button */
+.dropzone-upload-button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 320px;
+	height: 240px;
+	cursor: pointer;
+	padding: 0;
+	margin: 0 auto;
+}
+
+/* Font Selection Card List */
+.font-selection-card {
+	width: 100%;
+	max-width: 360px;
+	max-height: 320px;
+	display: flex;
+	flex-direction: column;
+	font-family: monospace;
+	font-size: 12px;
+	border: 1.5px solid #dbe8f8;
+	padding: 0;
+}
+
+/* Card Content Item with strict 0.5em inner padding */
+.card-row-item {
+	padding-left: 0.5em !important;
+	padding-right: 0.5em !important;
+}
+
+/* Button & Pill Style (GHTKO - Exact Elevation Shadow Formula) */
+.crystal-button,
+.GHTKO {
+	--elevation-depth: 20;
+	position: relative;
+	isolation: isolate;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 1.5px solid rgba(255, 255, 255, 0.6);
+	background: rgba(255, 255, 255, 0.16);
+	color: rgba(255, 255, 255, 0.95);
+	box-shadow:
+		0 calc(0.4 * var(--elevation-depth, 20) * 1px) calc(0.9 * var(--elevation-depth, 20) * 1px) 0
+			rgba(
+				0,
+				0,
+				0,
+				calc(
+					0.13441 - 0.00063 * var(--elevation-depth, 20) + 0.00003 * var(--elevation-depth, 20) *
+						var(--elevation-depth, 20)
+				)
+			),
+		0 calc(0.075 * var(--elevation-depth, 20) * 1px) calc(0.225 * var(--elevation-depth, 20) * 1px)
+			0
+			rgba(
+				0,
+				0,
+				0,
+				calc(
+					0.10997 - 0.00051 * var(--elevation-depth, 20) + 0.00003 * var(--elevation-depth, 20) *
+						var(--elevation-depth, 20)
+				)
+			);
+	backdrop-filter: blur(24px) saturate(180%);
+	-webkit-backdrop-filter: blur(24px) saturate(180%);
+	min-height: 54px;
+	transition:
+		box-shadow 0.2s,
+		background 0.2s,
+		transform 0.15s,
+		border-color 0.2s;
+	border-radius: 1000px;
+	font-size: 15px;
+	letter-spacing: -0.01em;
+	font-weight: 700;
+	padding-left: 24px;
+	padding-right: 24px;
+	overflow: hidden !important;
+	cursor: pointer;
+}
+
+.crystal-button:hover,
+.GHTKO:hover {
+	--elevation-depth: 32;
+	background: rgba(255, 255, 255, 0.28);
+	border-color: rgba(255, 255, 255, 0.95);
+	color: #ffffff;
+	transform: translateY(-2px);
+}
+
+.crystal-button:active,
+.GHTKO:active {
+	--elevation-depth: 10;
+	transform: translateY(0);
+}
+
+/* Central Translucent Glass Capsule Container */
+.crystal-capsule {
+	--elevation-depth: 36;
+	position: relative;
+	isolation: isolate;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap !important;
+	flex-shrink: 0;
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(28px) saturate(180%);
+	-webkit-backdrop-filter: blur(28px) saturate(180%);
+	border: 2px solid rgba(255, 255, 255, 0.75);
+	border-radius: 1000px;
+	box-shadow:
+		0 calc(0.4 * var(--elevation-depth, 36) * 1px) calc(0.9 * var(--elevation-depth, 36) * 1px) 0
+			rgba(
+				0,
+				0,
+				0,
+				calc(
+					0.13441 - 0.00063 * var(--elevation-depth, 36) + 0.00003 * var(--elevation-depth, 36) *
+						var(--elevation-depth, 36)
+				)
+			),
+		0 calc(0.075 * var(--elevation-depth, 36) * 1px) calc(0.225 * var(--elevation-depth, 36) * 1px)
+			0
+			rgba(
+				0,
+				0,
+				0,
+				calc(
+					0.10997 - 0.00051 * var(--elevation-depth, 36) + 0.00003 * var(--elevation-depth, 36) *
+						var(--elevation-depth, 36)
+				)
+			);
+	overflow: hidden !important;
+}
+
+.crystal-capsule::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50%;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+	border-radius: 1000px 1000px 0 0;
+	pointer-events: none;
+}
+
+/* Authentic Blueprint Drawing Card */
+.blueprint-card {
+	--elevation-depth: 24;
+	background: rgba(25, 72, 112, 0.92);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border: 1.5px solid rgba(255, 255, 255, 0.75);
+	padding: 0;
+	box-shadow:
+		0 calc(0.4 * var(--elevation-depth, 24) * 1px) calc(0.9 * var(--elevation-depth, 24) * 1px) 0
+			rgba(
+				0,
+				0,
+				0,
+				calc(
+					0.13441 - 0.00063 * var(--elevation-depth, 24) + 0.00003 * var(--elevation-depth, 24) *
+						var(--elevation-depth, 24)
+				)
+			),
+		0 calc(0.075 * var(--elevation-depth, 24) * 1px) calc(0.225 * var(--elevation-depth, 24) * 1px)
+			0
+			rgba(
+				0,
+				0,
+				0,
+				calc(
+					0.10997 - 0.00051 * var(--elevation-depth, 24) + 0.00003 * var(--elevation-depth, 24) *
+						var(--elevation-depth, 24)
+				)
+			);
+}
+
+/* White Paper A4 Sheet Card (Strict Zero Border-Radius) */
+.a4-paper-sheet {
+	--elevation-depth: 48;
+	background: #ffffff;
+	color: #14486f;
+	border: 2px solid #195782;
+	border-radius: 0px !important;
+	padding: 32px;
+	box-shadow:
+		0 calc(0.4 * var(--elevation-depth, 48) * 1px) calc(0.9 * var(--elevation-depth, 48) * 1px) 0
+			rgba(
+				0,
+				0,
+				0,
+				calc(
+					0.13441 - 0.00063 * var(--elevation-depth, 48) + 0.00003 * var(--elevation-depth, 48) *
+						var(--elevation-depth, 48)
+				)
+			),
+		0 calc(0.075 * var(--elevation-depth, 48) * 1px) calc(0.225 * var(--elevation-depth, 48) * 1px)
+			0
+			rgba(
+				0,
+				0,
+				0,
+				calc(
+					0.10997 - 0.00051 * var(--elevation-depth, 48) + 0.00003 * var(--elevation-depth, 48) *
+						var(--elevation-depth, 48)
+				)
+			);
+}
+
+/* Custom Blueprint Scrollbar */
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+::-webkit-scrollbar-track {
+	background: rgba(20, 58, 90, 0.8);
+}
+::-webkit-scrollbar-thumb {
+	background: #bdd4f1;
+	border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #ffffff;
+}

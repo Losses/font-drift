@@ -1,0 +1,1028 @@
+[
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 12,
+    "advanceWidth": 12.000091552734375,
+    "fontBoundingBoxAscent": 13,
+    "fontBoundingBoxDescent": 4,
+    "actualBoundingBoxAscent": 10,
+    "actualBoundingBoxDescent": 2,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 12,
+    "pixelBox": {
+      "x": 22,
+      "y": 22,
+      "width": 12,
+      "height": 12
+    },
+    "pngFileName": "放_12px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 12,
+    "advanceWidth": 12.000091552734375,
+    "fontBoundingBoxAscent": 13,
+    "fontBoundingBoxDescent": 4,
+    "actualBoundingBoxAscent": 10,
+    "actualBoundingBoxDescent": 1,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 12,
+    "pixelBox": {
+      "x": 22,
+      "y": 22,
+      "width": 12,
+      "height": 11
+    },
+    "pngFileName": "轻_12px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 12,
+    "advanceWidth": 12.000091552734375,
+    "fontBoundingBoxAscent": 13,
+    "fontBoundingBoxDescent": 4,
+    "actualBoundingBoxAscent": 10,
+    "actualBoundingBoxDescent": 2,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 12,
+    "pixelBox": {
+      "x": 22,
+      "y": 22,
+      "width": 12,
+      "height": 11
+    },
+    "pngFileName": "松_12px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 14,
+    "advanceWidth": 13.99993896484375,
+    "fontBoundingBoxAscent": 15,
+    "fontBoundingBoxDescent": 5,
+    "actualBoundingBoxAscent": 12,
+    "actualBoundingBoxDescent": 2,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 14,
+    "pixelBox": {
+      "x": 23,
+      "y": 22,
+      "width": 14,
+      "height": 14
+    },
+    "pngFileName": "放_14px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 14,
+    "advanceWidth": 13.99993896484375,
+    "fontBoundingBoxAscent": 15,
+    "fontBoundingBoxDescent": 5,
+    "actualBoundingBoxAscent": 12,
+    "actualBoundingBoxDescent": 1,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 14,
+    "pixelBox": {
+      "x": 23,
+      "y": 22,
+      "width": 14,
+      "height": 13
+    },
+    "pngFileName": "轻_14px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 14,
+    "advanceWidth": 13.99993896484375,
+    "fontBoundingBoxAscent": 15,
+    "fontBoundingBoxDescent": 5,
+    "actualBoundingBoxAscent": 11,
+    "actualBoundingBoxDescent": 2,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 14,
+    "pixelBox": {
+      "x": 23,
+      "y": 23,
+      "width": 14,
+      "height": 13
+    },
+    "pngFileName": "松_14px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 16,
+    "advanceWidth": 16.000030517578125,
+    "fontBoundingBoxAscent": 17,
+    "fontBoundingBoxDescent": 5,
+    "actualBoundingBoxAscent": 14,
+    "actualBoundingBoxDescent": 3,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 16,
+    "pixelBox": {
+      "x": 24,
+      "y": 23,
+      "width": 16,
+      "height": 17
+    },
+    "pngFileName": "放_16px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 16,
+    "advanceWidth": 16.000030517578125,
+    "fontBoundingBoxAscent": 17,
+    "fontBoundingBoxDescent": 5,
+    "actualBoundingBoxAscent": 13,
+    "actualBoundingBoxDescent": 2,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 16,
+    "pixelBox": {
+      "x": 24,
+      "y": 24,
+      "width": 16,
+      "height": 15
+    },
+    "pngFileName": "轻_16px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 16,
+    "advanceWidth": 16.000030517578125,
+    "fontBoundingBoxAscent": 17,
+    "fontBoundingBoxDescent": 5,
+    "actualBoundingBoxAscent": 13,
+    "actualBoundingBoxDescent": 3,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 16,
+    "pixelBox": {
+      "x": 24,
+      "y": 24,
+      "width": 16,
+      "height": 16
+    },
+    "pngFileName": "松_16px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 18,
+    "advanceWidth": 17.999893188476562,
+    "fontBoundingBoxAscent": 19,
+    "fontBoundingBoxDescent": 6,
+    "actualBoundingBoxAscent": 15,
+    "actualBoundingBoxDescent": 3,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 18,
+    "pixelBox": {
+      "x": 25,
+      "y": 24,
+      "width": 18,
+      "height": 18
+    },
+    "pngFileName": "放_18px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 18,
+    "advanceWidth": 17.999893188476562,
+    "fontBoundingBoxAscent": 19,
+    "fontBoundingBoxDescent": 6,
+    "actualBoundingBoxAscent": 15,
+    "actualBoundingBoxDescent": 2,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 18,
+    "pixelBox": {
+      "x": 25,
+      "y": 24,
+      "width": 18,
+      "height": 17
+    },
+    "pngFileName": "轻_18px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 18,
+    "advanceWidth": 17.999893188476562,
+    "fontBoundingBoxAscent": 19,
+    "fontBoundingBoxDescent": 6,
+    "actualBoundingBoxAscent": 15,
+    "actualBoundingBoxDescent": 3,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 18,
+    "pixelBox": {
+      "x": 25,
+      "y": 24,
+      "width": 18,
+      "height": 18
+    },
+    "pngFileName": "松_18px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 20,
+    "advanceWidth": 19.999984741210938,
+    "fontBoundingBoxAscent": 21,
+    "fontBoundingBoxDescent": 7,
+    "actualBoundingBoxAscent": 17,
+    "actualBoundingBoxDescent": 3,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 20,
+    "pixelBox": {
+      "x": 26,
+      "y": 25,
+      "width": 20,
+      "height": 20
+    },
+    "pngFileName": "放_20px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 20,
+    "advanceWidth": 19.999984741210938,
+    "fontBoundingBoxAscent": 21,
+    "fontBoundingBoxDescent": 7,
+    "actualBoundingBoxAscent": 17,
+    "actualBoundingBoxDescent": 2,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 20,
+    "pixelBox": {
+      "x": 27,
+      "y": 25,
+      "width": 18,
+      "height": 19
+    },
+    "pngFileName": "轻_20px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 20,
+    "advanceWidth": 19.999984741210938,
+    "fontBoundingBoxAscent": 21,
+    "fontBoundingBoxDescent": 7,
+    "actualBoundingBoxAscent": 17,
+    "actualBoundingBoxDescent": 3,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 20,
+    "pixelBox": {
+      "x": 26,
+      "y": 25,
+      "width": 19,
+      "height": 20
+    },
+    "pngFileName": "松_20px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 24,
+    "advanceWidth": 23.999923706054688,
+    "fontBoundingBoxAscent": 25,
+    "fontBoundingBoxDescent": 8,
+    "actualBoundingBoxAscent": 20,
+    "actualBoundingBoxDescent": 3,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 24,
+    "pixelBox": {
+      "x": 28,
+      "y": 27,
+      "width": 23,
+      "height": 23
+    },
+    "pngFileName": "放_24px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 24,
+    "advanceWidth": 23.999923706054688,
+    "fontBoundingBoxAscent": 25,
+    "fontBoundingBoxDescent": 8,
+    "actualBoundingBoxAscent": 20,
+    "actualBoundingBoxDescent": 2,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 23,
+    "pixelBox": {
+      "x": 29,
+      "y": 27,
+      "width": 22,
+      "height": 22
+    },
+    "pngFileName": "轻_24px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 24,
+    "advanceWidth": 23.999923706054688,
+    "fontBoundingBoxAscent": 25,
+    "fontBoundingBoxDescent": 8,
+    "actualBoundingBoxAscent": 20,
+    "actualBoundingBoxDescent": 3,
+    "actualBoundingBoxLeft": 0,
+    "actualBoundingBoxRight": 23,
+    "pixelBox": {
+      "x": 28,
+      "y": 27,
+      "width": 23,
+      "height": 23
+    },
+    "pngFileName": "松_24px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 28,
+    "advanceWidth": 28.0001220703125,
+    "fontBoundingBoxAscent": 30,
+    "fontBoundingBoxDescent": 10,
+    "actualBoundingBoxAscent": 24,
+    "actualBoundingBoxDescent": 4,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 27,
+    "pixelBox": {
+      "x": 31,
+      "y": 29,
+      "width": 26,
+      "height": 27
+    },
+    "pngFileName": "放_28px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 28,
+    "advanceWidth": 28.0001220703125,
+    "fontBoundingBoxAscent": 30,
+    "fontBoundingBoxDescent": 10,
+    "actualBoundingBoxAscent": 23,
+    "actualBoundingBoxDescent": 3,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 27,
+    "pixelBox": {
+      "x": 31,
+      "y": 29,
+      "width": 26,
+      "height": 26
+    },
+    "pngFileName": "轻_28px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 28,
+    "advanceWidth": 28.0001220703125,
+    "fontBoundingBoxAscent": 30,
+    "fontBoundingBoxDescent": 10,
+    "actualBoundingBoxAscent": 23,
+    "actualBoundingBoxDescent": 4,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 27,
+    "pixelBox": {
+      "x": 31,
+      "y": 29,
+      "width": 26,
+      "height": 27
+    },
+    "pngFileName": "松_28px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 32,
+    "advanceWidth": 32.00006103515625,
+    "fontBoundingBoxAscent": 34,
+    "fontBoundingBoxDescent": 11,
+    "actualBoundingBoxAscent": 27,
+    "actualBoundingBoxDescent": 4,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 31,
+    "pixelBox": {
+      "x": 33,
+      "y": 31,
+      "width": 30,
+      "height": 31
+    },
+    "pngFileName": "放_32px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 32,
+    "advanceWidth": 32.00006103515625,
+    "fontBoundingBoxAscent": 34,
+    "fontBoundingBoxDescent": 11,
+    "actualBoundingBoxAscent": 27,
+    "actualBoundingBoxDescent": 3,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 31,
+    "pixelBox": {
+      "x": 33,
+      "y": 31,
+      "width": 30,
+      "height": 30
+    },
+    "pngFileName": "轻_32px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 32,
+    "advanceWidth": 32.00006103515625,
+    "fontBoundingBoxAscent": 34,
+    "fontBoundingBoxDescent": 11,
+    "actualBoundingBoxAscent": 27,
+    "actualBoundingBoxDescent": 4,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 31,
+    "pixelBox": {
+      "x": 33,
+      "y": 32,
+      "width": 30,
+      "height": 30
+    },
+    "pngFileName": "松_32px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 36,
+    "advanceWidth": 36.00001525878906,
+    "fontBoundingBoxAscent": 38,
+    "fontBoundingBoxDescent": 12,
+    "actualBoundingBoxAscent": 30,
+    "actualBoundingBoxDescent": 4,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 35,
+    "pixelBox": {
+      "x": 35,
+      "y": 33,
+      "width": 34,
+      "height": 34
+    },
+    "pngFileName": "放_36px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 36,
+    "advanceWidth": 36.00001525878906,
+    "fontBoundingBoxAscent": 38,
+    "fontBoundingBoxDescent": 12,
+    "actualBoundingBoxAscent": 30,
+    "actualBoundingBoxDescent": 3,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 35,
+    "pixelBox": {
+      "x": 35,
+      "y": 33,
+      "width": 34,
+      "height": 33
+    },
+    "pngFileName": "轻_36px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 36,
+    "advanceWidth": 36.00001525878906,
+    "fontBoundingBoxAscent": 38,
+    "fontBoundingBoxDescent": 12,
+    "actualBoundingBoxAscent": 30,
+    "actualBoundingBoxDescent": 4,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 35,
+    "pixelBox": {
+      "x": 35,
+      "y": 33,
+      "width": 34,
+      "height": 34
+    },
+    "pngFileName": "松_36px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 40,
+    "advanceWidth": 39.999969482421875,
+    "fontBoundingBoxAscent": 42,
+    "fontBoundingBoxDescent": 14,
+    "actualBoundingBoxAscent": 33,
+    "actualBoundingBoxDescent": 4,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 39,
+    "pixelBox": {
+      "x": 37,
+      "y": 35,
+      "width": 38,
+      "height": 37
+    },
+    "pngFileName": "放_40px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 40,
+    "advanceWidth": 39.999969482421875,
+    "fontBoundingBoxAscent": 42,
+    "fontBoundingBoxDescent": 14,
+    "actualBoundingBoxAscent": 33,
+    "actualBoundingBoxDescent": 4,
+    "actualBoundingBoxLeft": -2,
+    "actualBoundingBoxRight": 39,
+    "pixelBox": {
+      "x": 38,
+      "y": 35,
+      "width": 37,
+      "height": 37
+    },
+    "pngFileName": "轻_40px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 40,
+    "advanceWidth": 39.999969482421875,
+    "fontBoundingBoxAscent": 42,
+    "fontBoundingBoxDescent": 14,
+    "actualBoundingBoxAscent": 33,
+    "actualBoundingBoxDescent": 5,
+    "actualBoundingBoxLeft": -1,
+    "actualBoundingBoxRight": 39,
+    "pixelBox": {
+      "x": 37,
+      "y": 35,
+      "width": 37,
+      "height": 38
+    },
+    "pngFileName": "松_40px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 48,
+    "advanceWidth": 48.000091552734375,
+    "fontBoundingBoxAscent": 51,
+    "fontBoundingBoxDescent": 16,
+    "actualBoundingBoxAscent": 40,
+    "actualBoundingBoxDescent": 5,
+    "actualBoundingBoxLeft": -2,
+    "actualBoundingBoxRight": 47,
+    "pixelBox": {
+      "x": 46,
+      "y": 42,
+      "width": 45,
+      "height": 45
+    },
+    "pngFileName": "放_48px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 48,
+    "advanceWidth": 48.000091552734375,
+    "fontBoundingBoxAscent": 51,
+    "fontBoundingBoxDescent": 16,
+    "actualBoundingBoxAscent": 40,
+    "actualBoundingBoxDescent": 5,
+    "actualBoundingBoxLeft": -2,
+    "actualBoundingBoxRight": 46,
+    "pixelBox": {
+      "x": 46,
+      "y": 42,
+      "width": 44,
+      "height": 45
+    },
+    "pngFileName": "轻_48px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 48,
+    "advanceWidth": 48.000091552734375,
+    "fontBoundingBoxAscent": 51,
+    "fontBoundingBoxDescent": 16,
+    "actualBoundingBoxAscent": 39,
+    "actualBoundingBoxDescent": 6,
+    "actualBoundingBoxLeft": -2,
+    "actualBoundingBoxRight": 46,
+    "pixelBox": {
+      "x": 46,
+      "y": 43,
+      "width": 44,
+      "height": 45
+    },
+    "pngFileName": "松_48px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 56,
+    "advanceWidth": 56,
+    "fontBoundingBoxAscent": 59,
+    "fontBoundingBoxDescent": 19,
+    "actualBoundingBoxAscent": 47,
+    "actualBoundingBoxDescent": 6,
+    "actualBoundingBoxLeft": -2,
+    "actualBoundingBoxRight": 54,
+    "pixelBox": {
+      "x": 53,
+      "y": 49,
+      "width": 52,
+      "height": 53
+    },
+    "pngFileName": "放_56px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 56,
+    "advanceWidth": 56,
+    "fontBoundingBoxAscent": 59,
+    "fontBoundingBoxDescent": 19,
+    "actualBoundingBoxAscent": 46,
+    "actualBoundingBoxDescent": 5,
+    "actualBoundingBoxLeft": -2,
+    "actualBoundingBoxRight": 54,
+    "pixelBox": {
+      "x": 53,
+      "y": 50,
+      "width": 52,
+      "height": 51
+    },
+    "pngFileName": "轻_56px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 56,
+    "advanceWidth": 56,
+    "fontBoundingBoxAscent": 59,
+    "fontBoundingBoxDescent": 19,
+    "actualBoundingBoxAscent": 46,
+    "actualBoundingBoxDescent": 6,
+    "actualBoundingBoxLeft": -2,
+    "actualBoundingBoxRight": 54,
+    "pixelBox": {
+      "x": 53,
+      "y": 50,
+      "width": 52,
+      "height": 52
+    },
+    "pngFileName": "松_56px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 64,
+    "advanceWidth": 63.99989318847656,
+    "fontBoundingBoxAscent": 68,
+    "fontBoundingBoxDescent": 22,
+    "actualBoundingBoxAscent": 53,
+    "actualBoundingBoxDescent": 7,
+    "actualBoundingBoxLeft": -2,
+    "actualBoundingBoxRight": 62,
+    "pixelBox": {
+      "x": 60,
+      "y": 56,
+      "width": 60,
+      "height": 59
+    },
+    "pngFileName": "放_64px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 64,
+    "advanceWidth": 63.99989318847656,
+    "fontBoundingBoxAscent": 68,
+    "fontBoundingBoxDescent": 22,
+    "actualBoundingBoxAscent": 53,
+    "actualBoundingBoxDescent": 6,
+    "actualBoundingBoxLeft": -3,
+    "actualBoundingBoxRight": 62,
+    "pixelBox": {
+      "x": 61,
+      "y": 57,
+      "width": 58,
+      "height": 58
+    },
+    "pngFileName": "轻_64px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 64,
+    "advanceWidth": 63.99989318847656,
+    "fontBoundingBoxAscent": 68,
+    "fontBoundingBoxDescent": 22,
+    "actualBoundingBoxAscent": 53,
+    "actualBoundingBoxDescent": 7,
+    "actualBoundingBoxLeft": -2,
+    "actualBoundingBoxRight": 62,
+    "pixelBox": {
+      "x": 60,
+      "y": 57,
+      "width": 60,
+      "height": 59
+    },
+    "pngFileName": "松_64px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 72,
+    "advanceWidth": 72.00003051757812,
+    "fontBoundingBoxAscent": 76,
+    "fontBoundingBoxDescent": 24,
+    "actualBoundingBoxAscent": 60,
+    "actualBoundingBoxDescent": 8,
+    "actualBoundingBoxLeft": -2,
+    "actualBoundingBoxRight": 70,
+    "pixelBox": {
+      "x": 67,
+      "y": 63,
+      "width": 68,
+      "height": 67
+    },
+    "pngFileName": "放_72px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 72,
+    "advanceWidth": 72.00003051757812,
+    "fontBoundingBoxAscent": 76,
+    "fontBoundingBoxDescent": 24,
+    "actualBoundingBoxAscent": 59,
+    "actualBoundingBoxDescent": 7,
+    "actualBoundingBoxLeft": -3,
+    "actualBoundingBoxRight": 69,
+    "pixelBox": {
+      "x": 68,
+      "y": 64,
+      "width": 66,
+      "height": 66
+    },
+    "pngFileName": "轻_72px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 72,
+    "advanceWidth": 72.00003051757812,
+    "fontBoundingBoxAscent": 76,
+    "fontBoundingBoxDescent": 24,
+    "actualBoundingBoxAscent": 59,
+    "actualBoundingBoxDescent": 8,
+    "actualBoundingBoxLeft": -3,
+    "actualBoundingBoxRight": 69,
+    "pixelBox": {
+      "x": 68,
+      "y": 64,
+      "width": 66,
+      "height": 67
+    },
+    "pngFileName": "松_72px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 80,
+    "advanceWidth": 79.99992370605469,
+    "fontBoundingBoxAscent": 85,
+    "fontBoundingBoxDescent": 27,
+    "actualBoundingBoxAscent": 67,
+    "actualBoundingBoxDescent": 8,
+    "actualBoundingBoxLeft": -2,
+    "actualBoundingBoxRight": 77,
+    "pixelBox": {
+      "x": 74,
+      "y": 69,
+      "width": 75,
+      "height": 75
+    },
+    "pngFileName": "放_80px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 80,
+    "advanceWidth": 79.99992370605469,
+    "fontBoundingBoxAscent": 85,
+    "fontBoundingBoxDescent": 27,
+    "actualBoundingBoxAscent": 66,
+    "actualBoundingBoxDescent": 8,
+    "actualBoundingBoxLeft": -4,
+    "actualBoundingBoxRight": 77,
+    "pixelBox": {
+      "x": 76,
+      "y": 70,
+      "width": 72,
+      "height": 74
+    },
+    "pngFileName": "轻_80px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 80,
+    "advanceWidth": 79.99992370605469,
+    "fontBoundingBoxAscent": 85,
+    "fontBoundingBoxDescent": 27,
+    "actualBoundingBoxAscent": 65,
+    "actualBoundingBoxDescent": 9,
+    "actualBoundingBoxLeft": -3,
+    "actualBoundingBoxRight": 77,
+    "pixelBox": {
+      "x": 75,
+      "y": 71,
+      "width": 74,
+      "height": 74
+    },
+    "pngFileName": "松_80px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 96,
+    "advanceWidth": 95.99995422363281,
+    "fontBoundingBoxAscent": 102,
+    "fontBoundingBoxDescent": 33,
+    "actualBoundingBoxAscent": 80,
+    "actualBoundingBoxDescent": 10,
+    "actualBoundingBoxLeft": -3,
+    "actualBoundingBoxRight": 93,
+    "pixelBox": {
+      "x": 90,
+      "y": 84,
+      "width": 90,
+      "height": 90
+    },
+    "pngFileName": "放_96px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 96,
+    "advanceWidth": 95.99995422363281,
+    "fontBoundingBoxAscent": 102,
+    "fontBoundingBoxDescent": 33,
+    "actualBoundingBoxAscent": 79,
+    "actualBoundingBoxDescent": 9,
+    "actualBoundingBoxLeft": -4,
+    "actualBoundingBoxRight": 92,
+    "pixelBox": {
+      "x": 91,
+      "y": 85,
+      "width": 88,
+      "height": 88
+    },
+    "pngFileName": "轻_96px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 96,
+    "advanceWidth": 95.99995422363281,
+    "fontBoundingBoxAscent": 102,
+    "fontBoundingBoxDescent": 33,
+    "actualBoundingBoxAscent": 79,
+    "actualBoundingBoxDescent": 10,
+    "actualBoundingBoxLeft": -4,
+    "actualBoundingBoxRight": 92,
+    "pixelBox": {
+      "x": 91,
+      "y": 85,
+      "width": 88,
+      "height": 89
+    },
+    "pngFileName": "松_96px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 108,
+    "advanceWidth": 108.00004577636719,
+    "fontBoundingBoxAscent": 114,
+    "fontBoundingBoxDescent": 37,
+    "actualBoundingBoxAscent": 90,
+    "actualBoundingBoxDescent": 11,
+    "actualBoundingBoxLeft": -4,
+    "actualBoundingBoxRight": 105,
+    "pixelBox": {
+      "x": 102,
+      "y": 94,
+      "width": 101,
+      "height": 101
+    },
+    "pngFileName": "放_108px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 108,
+    "advanceWidth": 108.00004577636719,
+    "fontBoundingBoxAscent": 114,
+    "fontBoundingBoxDescent": 37,
+    "actualBoundingBoxAscent": 89,
+    "actualBoundingBoxDescent": 10,
+    "actualBoundingBoxLeft": -5,
+    "actualBoundingBoxRight": 103,
+    "pixelBox": {
+      "x": 103,
+      "y": 96,
+      "width": 98,
+      "height": 98
+    },
+    "pngFileName": "轻_108px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 108,
+    "advanceWidth": 108.00004577636719,
+    "fontBoundingBoxAscent": 114,
+    "fontBoundingBoxDescent": 37,
+    "actualBoundingBoxAscent": 89,
+    "actualBoundingBoxDescent": 11,
+    "actualBoundingBoxLeft": -4,
+    "actualBoundingBoxRight": 104,
+    "pixelBox": {
+      "x": 102,
+      "y": 96,
+      "width": 100,
+      "height": 99
+    },
+    "pngFileName": "松_108px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "放",
+    "fontSize": 120,
+    "advanceWidth": 119.99989318847656,
+    "fontBoundingBoxAscent": 127,
+    "fontBoundingBoxDescent": 41,
+    "actualBoundingBoxAscent": 100,
+    "actualBoundingBoxDescent": 12,
+    "actualBoundingBoxLeft": -4,
+    "actualBoundingBoxRight": 116,
+    "pixelBox": {
+      "x": 112,
+      "y": 105,
+      "width": 112,
+      "height": 111
+    },
+    "pngFileName": "放_120px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "轻",
+    "fontSize": 120,
+    "advanceWidth": 119.99989318847656,
+    "fontBoundingBoxAscent": 127,
+    "fontBoundingBoxDescent": 41,
+    "actualBoundingBoxAscent": 98,
+    "actualBoundingBoxDescent": 12,
+    "actualBoundingBoxLeft": -6,
+    "actualBoundingBoxRight": 115,
+    "pixelBox": {
+      "x": 114,
+      "y": 106,
+      "width": 109,
+      "height": 110
+    },
+    "pngFileName": "轻_120px.png"
+  },
+  {
+    "fontFamily": "PingFang SC Regular",
+    "char": "松",
+    "fontSize": 120,
+    "advanceWidth": 119.99989318847656,
+    "fontBoundingBoxAscent": 127,
+    "fontBoundingBoxDescent": 41,
+    "actualBoundingBoxAscent": 97,
+    "actualBoundingBoxDescent": 14,
+    "actualBoundingBoxLeft": -5,
+    "actualBoundingBoxRight": 115,
+    "pixelBox": {
+      "x": 113,
+      "y": 107,
+      "width": 110,
+      "height": 110
+    },
+    "pngFileName": "松_120px.png"
+  }
+]

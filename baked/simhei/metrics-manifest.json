@@ -1,0 +1,1028 @@
+[
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 12,
+		"advanceWidth": 12,
+		"fontBoundingBoxAscent": 10,
+		"fontBoundingBoxDescent": 2,
+		"actualBoundingBoxAscent": 10,
+		"actualBoundingBoxDescent": 2,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 12,
+		"pixelBox": {
+			"x": 22,
+			"y": 22,
+			"width": 12,
+			"height": 12
+		},
+		"pngFileName": "放_12px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 12,
+		"advanceWidth": 12,
+		"fontBoundingBoxAscent": 10,
+		"fontBoundingBoxDescent": 2,
+		"actualBoundingBoxAscent": 10,
+		"actualBoundingBoxDescent": 1,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 12,
+		"pixelBox": {
+			"x": 22,
+			"y": 22,
+			"width": 12,
+			"height": 11
+		},
+		"pngFileName": "轻_12px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 12,
+		"advanceWidth": 12,
+		"fontBoundingBoxAscent": 10,
+		"fontBoundingBoxDescent": 2,
+		"actualBoundingBoxAscent": 10,
+		"actualBoundingBoxDescent": 1,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 12,
+		"pixelBox": {
+			"x": 22,
+			"y": 22,
+			"width": 12,
+			"height": 11
+		},
+		"pngFileName": "松_12px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 14,
+		"advanceWidth": 14,
+		"fontBoundingBoxAscent": 12,
+		"fontBoundingBoxDescent": 2,
+		"actualBoundingBoxAscent": 12,
+		"actualBoundingBoxDescent": 2,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 14,
+		"pixelBox": {
+			"x": 23,
+			"y": 22,
+			"width": 14,
+			"height": 14
+		},
+		"pngFileName": "放_14px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 14,
+		"advanceWidth": 14,
+		"fontBoundingBoxAscent": 12,
+		"fontBoundingBoxDescent": 2,
+		"actualBoundingBoxAscent": 12,
+		"actualBoundingBoxDescent": 1,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 14,
+		"pixelBox": {
+			"x": 23,
+			"y": 22,
+			"width": 14,
+			"height": 13
+		},
+		"pngFileName": "轻_14px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 14,
+		"advanceWidth": 14,
+		"fontBoundingBoxAscent": 12,
+		"fontBoundingBoxDescent": 2,
+		"actualBoundingBoxAscent": 11,
+		"actualBoundingBoxDescent": 1,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 14,
+		"pixelBox": {
+			"x": 23,
+			"y": 23,
+			"width": 14,
+			"height": 12
+		},
+		"pngFileName": "松_14px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 16,
+		"advanceWidth": 16,
+		"fontBoundingBoxAscent": 14,
+		"fontBoundingBoxDescent": 2,
+		"actualBoundingBoxAscent": 14,
+		"actualBoundingBoxDescent": 2,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 16,
+		"pixelBox": {
+			"x": 24,
+			"y": 23,
+			"width": 16,
+			"height": 16
+		},
+		"pngFileName": "放_16px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 16,
+		"advanceWidth": 16,
+		"fontBoundingBoxAscent": 14,
+		"fontBoundingBoxDescent": 2,
+		"actualBoundingBoxAscent": 14,
+		"actualBoundingBoxDescent": 2,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 16,
+		"pixelBox": {
+			"x": 25,
+			"y": 23,
+			"width": 15,
+			"height": 16
+		},
+		"pngFileName": "轻_16px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 16,
+		"advanceWidth": 16,
+		"fontBoundingBoxAscent": 14,
+		"fontBoundingBoxDescent": 2,
+		"actualBoundingBoxAscent": 13,
+		"actualBoundingBoxDescent": 2,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 16,
+		"pixelBox": {
+			"x": 24,
+			"y": 24,
+			"width": 16,
+			"height": 15
+		},
+		"pngFileName": "松_16px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 18,
+		"advanceWidth": 18,
+		"fontBoundingBoxAscent": 15,
+		"fontBoundingBoxDescent": 3,
+		"actualBoundingBoxAscent": 15,
+		"actualBoundingBoxDescent": 3,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 18,
+		"pixelBox": {
+			"x": 25,
+			"y": 24,
+			"width": 18,
+			"height": 17
+		},
+		"pngFileName": "放_18px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 18,
+		"advanceWidth": 18,
+		"fontBoundingBoxAscent": 15,
+		"fontBoundingBoxDescent": 3,
+		"actualBoundingBoxAscent": 15,
+		"actualBoundingBoxDescent": 2,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 18,
+		"pixelBox": {
+			"x": 26,
+			"y": 24,
+			"width": 17,
+			"height": 17
+		},
+		"pngFileName": "轻_18px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 18,
+		"advanceWidth": 18,
+		"fontBoundingBoxAscent": 15,
+		"fontBoundingBoxDescent": 3,
+		"actualBoundingBoxAscent": 15,
+		"actualBoundingBoxDescent": 2,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 18,
+		"pixelBox": {
+			"x": 25,
+			"y": 24,
+			"width": 18,
+			"height": 17
+		},
+		"pngFileName": "松_18px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 20,
+		"advanceWidth": 20,
+		"fontBoundingBoxAscent": 17,
+		"fontBoundingBoxDescent": 3,
+		"actualBoundingBoxAscent": 17,
+		"actualBoundingBoxDescent": 3,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 20,
+		"pixelBox": {
+			"x": 26,
+			"y": 25,
+			"width": 20,
+			"height": 19
+		},
+		"pngFileName": "放_20px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 20,
+		"advanceWidth": 20,
+		"fontBoundingBoxAscent": 17,
+		"fontBoundingBoxDescent": 3,
+		"actualBoundingBoxAscent": 17,
+		"actualBoundingBoxDescent": 2,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 20,
+		"pixelBox": {
+			"x": 27,
+			"y": 25,
+			"width": 19,
+			"height": 19
+		},
+		"pngFileName": "轻_20px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 20,
+		"advanceWidth": 20,
+		"fontBoundingBoxAscent": 17,
+		"fontBoundingBoxDescent": 3,
+		"actualBoundingBoxAscent": 17,
+		"actualBoundingBoxDescent": 2,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 20,
+		"pixelBox": {
+			"x": 26,
+			"y": 25,
+			"width": 20,
+			"height": 19
+		},
+		"pngFileName": "松_20px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 24,
+		"advanceWidth": 24,
+		"fontBoundingBoxAscent": 21,
+		"fontBoundingBoxDescent": 3,
+		"actualBoundingBoxAscent": 20,
+		"actualBoundingBoxDescent": 3,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 24,
+		"pixelBox": {
+			"x": 28,
+			"y": 27,
+			"width": 23,
+			"height": 23
+		},
+		"pngFileName": "放_24px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 24,
+		"advanceWidth": 24,
+		"fontBoundingBoxAscent": 21,
+		"fontBoundingBoxDescent": 3,
+		"actualBoundingBoxAscent": 20,
+		"actualBoundingBoxDescent": 2,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 24,
+		"pixelBox": {
+			"x": 29,
+			"y": 27,
+			"width": 23,
+			"height": 22
+		},
+		"pngFileName": "轻_24px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 24,
+		"advanceWidth": 24,
+		"fontBoundingBoxAscent": 21,
+		"fontBoundingBoxDescent": 3,
+		"actualBoundingBoxAscent": 20,
+		"actualBoundingBoxDescent": 2,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 24,
+		"pixelBox": {
+			"x": 28,
+			"y": 27,
+			"width": 24,
+			"height": 22
+		},
+		"pngFileName": "松_24px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 28,
+		"advanceWidth": 28,
+		"fontBoundingBoxAscent": 24,
+		"fontBoundingBoxDescent": 4,
+		"actualBoundingBoxAscent": 24,
+		"actualBoundingBoxDescent": 3,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 27,
+		"pixelBox": {
+			"x": 31,
+			"y": 29,
+			"width": 26,
+			"height": 26
+		},
+		"pngFileName": "放_28px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 28,
+		"advanceWidth": 28,
+		"fontBoundingBoxAscent": 24,
+		"fontBoundingBoxDescent": 4,
+		"actualBoundingBoxAscent": 23,
+		"actualBoundingBoxDescent": 3,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 28,
+		"pixelBox": {
+			"x": 31,
+			"y": 29,
+			"width": 27,
+			"height": 26
+		},
+		"pngFileName": "轻_28px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 28,
+		"advanceWidth": 28,
+		"fontBoundingBoxAscent": 24,
+		"fontBoundingBoxDescent": 4,
+		"actualBoundingBoxAscent": 23,
+		"actualBoundingBoxDescent": 3,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 28,
+		"pixelBox": {
+			"x": 30,
+			"y": 29,
+			"width": 27,
+			"height": 26
+		},
+		"pngFileName": "松_28px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 32,
+		"advanceWidth": 32,
+		"fontBoundingBoxAscent": 28,
+		"fontBoundingBoxDescent": 5,
+		"actualBoundingBoxAscent": 27,
+		"actualBoundingBoxDescent": 4,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 31,
+		"pixelBox": {
+			"x": 33,
+			"y": 31,
+			"width": 30,
+			"height": 31
+		},
+		"pngFileName": "放_32px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 32,
+		"advanceWidth": 32,
+		"fontBoundingBoxAscent": 28,
+		"fontBoundingBoxDescent": 5,
+		"actualBoundingBoxAscent": 27,
+		"actualBoundingBoxDescent": 3,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 31,
+		"pixelBox": {
+			"x": 33,
+			"y": 31,
+			"width": 30,
+			"height": 30
+		},
+		"pngFileName": "轻_32px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 32,
+		"advanceWidth": 32,
+		"fontBoundingBoxAscent": 28,
+		"fontBoundingBoxDescent": 5,
+		"actualBoundingBoxAscent": 27,
+		"actualBoundingBoxDescent": 3,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 31,
+		"pixelBox": {
+			"x": 32,
+			"y": 32,
+			"width": 31,
+			"height": 29
+		},
+		"pngFileName": "松_32px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 36,
+		"advanceWidth": 36,
+		"fontBoundingBoxAscent": 31,
+		"fontBoundingBoxDescent": 5,
+		"actualBoundingBoxAscent": 30,
+		"actualBoundingBoxDescent": 4,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 35,
+		"pixelBox": {
+			"x": 35,
+			"y": 33,
+			"width": 34,
+			"height": 34
+		},
+		"pngFileName": "放_36px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 36,
+		"advanceWidth": 36,
+		"fontBoundingBoxAscent": 31,
+		"fontBoundingBoxDescent": 5,
+		"actualBoundingBoxAscent": 30,
+		"actualBoundingBoxDescent": 4,
+		"actualBoundingBoxLeft": -2,
+		"actualBoundingBoxRight": 35,
+		"pixelBox": {
+			"x": 36,
+			"y": 33,
+			"width": 33,
+			"height": 34
+		},
+		"pngFileName": "轻_36px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 36,
+		"advanceWidth": 36,
+		"fontBoundingBoxAscent": 31,
+		"fontBoundingBoxDescent": 5,
+		"actualBoundingBoxAscent": 30,
+		"actualBoundingBoxDescent": 4,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 35,
+		"pixelBox": {
+			"x": 34,
+			"y": 34,
+			"width": 35,
+			"height": 33
+		},
+		"pngFileName": "松_36px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 40,
+		"advanceWidth": 40,
+		"fontBoundingBoxAscent": 34,
+		"fontBoundingBoxDescent": 6,
+		"actualBoundingBoxAscent": 33,
+		"actualBoundingBoxDescent": 5,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 39,
+		"pixelBox": {
+			"x": 37,
+			"y": 35,
+			"width": 38,
+			"height": 37
+		},
+		"pngFileName": "放_40px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 40,
+		"advanceWidth": 40,
+		"fontBoundingBoxAscent": 34,
+		"fontBoundingBoxDescent": 6,
+		"actualBoundingBoxAscent": 33,
+		"actualBoundingBoxDescent": 4,
+		"actualBoundingBoxLeft": -2,
+		"actualBoundingBoxRight": 39,
+		"pixelBox": {
+			"x": 38,
+			"y": 35,
+			"width": 37,
+			"height": 37
+		},
+		"pngFileName": "轻_40px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 40,
+		"advanceWidth": 40,
+		"fontBoundingBoxAscent": 34,
+		"fontBoundingBoxDescent": 6,
+		"actualBoundingBoxAscent": 33,
+		"actualBoundingBoxDescent": 4,
+		"actualBoundingBoxLeft": 0,
+		"actualBoundingBoxRight": 39,
+		"pixelBox": {
+			"x": 37,
+			"y": 35,
+			"width": 38,
+			"height": 37
+		},
+		"pngFileName": "松_40px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 48,
+		"advanceWidth": 48,
+		"fontBoundingBoxAscent": 41,
+		"fontBoundingBoxDescent": 7,
+		"actualBoundingBoxAscent": 40,
+		"actualBoundingBoxDescent": 5,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 47,
+		"pixelBox": {
+			"x": 45,
+			"y": 42,
+			"width": 45,
+			"height": 45
+		},
+		"pngFileName": "放_48px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 48,
+		"advanceWidth": 48,
+		"fontBoundingBoxAscent": 41,
+		"fontBoundingBoxDescent": 7,
+		"actualBoundingBoxAscent": 40,
+		"actualBoundingBoxDescent": 5,
+		"actualBoundingBoxLeft": -2,
+		"actualBoundingBoxRight": 47,
+		"pixelBox": {
+			"x": 46,
+			"y": 42,
+			"width": 45,
+			"height": 45
+		},
+		"pngFileName": "轻_48px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 48,
+		"advanceWidth": 48,
+		"fontBoundingBoxAscent": 41,
+		"fontBoundingBoxDescent": 7,
+		"actualBoundingBoxAscent": 39,
+		"actualBoundingBoxDescent": 5,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 47,
+		"pixelBox": {
+			"x": 45,
+			"y": 43,
+			"width": 46,
+			"height": 44
+		},
+		"pngFileName": "松_48px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 56,
+		"advanceWidth": 56,
+		"fontBoundingBoxAscent": 48,
+		"fontBoundingBoxDescent": 8,
+		"actualBoundingBoxAscent": 47,
+		"actualBoundingBoxDescent": 6,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 54,
+		"pixelBox": {
+			"x": 52,
+			"y": 50,
+			"width": 53,
+			"height": 52
+		},
+		"pngFileName": "放_56px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 56,
+		"advanceWidth": 56,
+		"fontBoundingBoxAscent": 48,
+		"fontBoundingBoxDescent": 8,
+		"actualBoundingBoxAscent": 46,
+		"actualBoundingBoxDescent": 5,
+		"actualBoundingBoxLeft": -3,
+		"actualBoundingBoxRight": 54,
+		"pixelBox": {
+			"x": 54,
+			"y": 50,
+			"width": 51,
+			"height": 51
+		},
+		"pngFileName": "轻_56px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 56,
+		"advanceWidth": 56,
+		"fontBoundingBoxAscent": 48,
+		"fontBoundingBoxDescent": 8,
+		"actualBoundingBoxAscent": 46,
+		"actualBoundingBoxDescent": 5,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 55,
+		"pixelBox": {
+			"x": 52,
+			"y": 50,
+			"width": 53,
+			"height": 51
+		},
+		"pngFileName": "松_56px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 64,
+		"advanceWidth": 64,
+		"fontBoundingBoxAscent": 55,
+		"fontBoundingBoxDescent": 9,
+		"actualBoundingBoxAscent": 53,
+		"actualBoundingBoxDescent": 7,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 62,
+		"pixelBox": {
+			"x": 60,
+			"y": 56,
+			"width": 60,
+			"height": 60
+		},
+		"pngFileName": "放_64px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 64,
+		"advanceWidth": 64,
+		"fontBoundingBoxAscent": 55,
+		"fontBoundingBoxDescent": 9,
+		"actualBoundingBoxAscent": 53,
+		"actualBoundingBoxDescent": 7,
+		"actualBoundingBoxLeft": -3,
+		"actualBoundingBoxRight": 62,
+		"pixelBox": {
+			"x": 61,
+			"y": 56,
+			"width": 59,
+			"height": 60
+		},
+		"pngFileName": "轻_64px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 64,
+		"advanceWidth": 64,
+		"fontBoundingBoxAscent": 55,
+		"fontBoundingBoxDescent": 9,
+		"actualBoundingBoxAscent": 52,
+		"actualBoundingBoxDescent": 6,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 62,
+		"pixelBox": {
+			"x": 59,
+			"y": 57,
+			"width": 61,
+			"height": 58
+		},
+		"pngFileName": "松_64px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 72,
+		"advanceWidth": 72,
+		"fontBoundingBoxAscent": 62,
+		"fontBoundingBoxDescent": 10,
+		"actualBoundingBoxAscent": 60,
+		"actualBoundingBoxDescent": 8,
+		"actualBoundingBoxLeft": -2,
+		"actualBoundingBoxRight": 70,
+		"pixelBox": {
+			"x": 67,
+			"y": 63,
+			"width": 67,
+			"height": 68
+		},
+		"pngFileName": "放_72px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 72,
+		"advanceWidth": 72,
+		"fontBoundingBoxAscent": 62,
+		"fontBoundingBoxDescent": 10,
+		"actualBoundingBoxAscent": 60,
+		"actualBoundingBoxDescent": 8,
+		"actualBoundingBoxLeft": -4,
+		"actualBoundingBoxRight": 69,
+		"pixelBox": {
+			"x": 69,
+			"y": 63,
+			"width": 65,
+			"height": 68
+		},
+		"pngFileName": "轻_72px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 72,
+		"advanceWidth": 72,
+		"fontBoundingBoxAscent": 62,
+		"fontBoundingBoxDescent": 10,
+		"actualBoundingBoxAscent": 59,
+		"actualBoundingBoxDescent": 7,
+		"actualBoundingBoxLeft": -1,
+		"actualBoundingBoxRight": 70,
+		"pixelBox": {
+			"x": 67,
+			"y": 65,
+			"width": 68,
+			"height": 65
+		},
+		"pngFileName": "松_72px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 80,
+		"advanceWidth": 80,
+		"fontBoundingBoxAscent": 69,
+		"fontBoundingBoxDescent": 11,
+		"actualBoundingBoxAscent": 67,
+		"actualBoundingBoxDescent": 9,
+		"actualBoundingBoxLeft": -2,
+		"actualBoundingBoxRight": 77,
+		"pixelBox": {
+			"x": 74,
+			"y": 69,
+			"width": 75,
+			"height": 76
+		},
+		"pngFileName": "放_80px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 80,
+		"advanceWidth": 80,
+		"fontBoundingBoxAscent": 69,
+		"fontBoundingBoxDescent": 11,
+		"actualBoundingBoxAscent": 66,
+		"actualBoundingBoxDescent": 9,
+		"actualBoundingBoxLeft": -4,
+		"actualBoundingBoxRight": 77,
+		"pixelBox": {
+			"x": 76,
+			"y": 70,
+			"width": 73,
+			"height": 75
+		},
+		"pngFileName": "轻_80px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 80,
+		"advanceWidth": 80,
+		"fontBoundingBoxAscent": 69,
+		"fontBoundingBoxDescent": 11,
+		"actualBoundingBoxAscent": 65,
+		"actualBoundingBoxDescent": 8,
+		"actualBoundingBoxLeft": -2,
+		"actualBoundingBoxRight": 78,
+		"pixelBox": {
+			"x": 74,
+			"y": 71,
+			"width": 76,
+			"height": 73
+		},
+		"pngFileName": "松_80px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 96,
+		"advanceWidth": 96,
+		"fontBoundingBoxAscent": 83,
+		"fontBoundingBoxDescent": 14,
+		"actualBoundingBoxAscent": 80,
+		"actualBoundingBoxDescent": 10,
+		"actualBoundingBoxLeft": -2,
+		"actualBoundingBoxRight": 93,
+		"pixelBox": {
+			"x": 90,
+			"y": 85,
+			"width": 89,
+			"height": 89
+		},
+		"pngFileName": "放_96px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 96,
+		"advanceWidth": 96,
+		"fontBoundingBoxAscent": 83,
+		"fontBoundingBoxDescent": 14,
+		"actualBoundingBoxAscent": 79,
+		"actualBoundingBoxDescent": 10,
+		"actualBoundingBoxLeft": -5,
+		"actualBoundingBoxRight": 93,
+		"pixelBox": {
+			"x": 92,
+			"y": 85,
+			"width": 88,
+			"height": 89
+		},
+		"pngFileName": "轻_96px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 96,
+		"advanceWidth": 96,
+		"fontBoundingBoxAscent": 83,
+		"fontBoundingBoxDescent": 14,
+		"actualBoundingBoxAscent": 78,
+		"actualBoundingBoxDescent": 9,
+		"actualBoundingBoxLeft": -2,
+		"actualBoundingBoxRight": 94,
+		"pixelBox": {
+			"x": 89,
+			"y": 86,
+			"width": 91,
+			"height": 87
+		},
+		"pngFileName": "松_96px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 108,
+		"advanceWidth": 108,
+		"fontBoundingBoxAscent": 93,
+		"fontBoundingBoxDescent": 15,
+		"actualBoundingBoxAscent": 90,
+		"actualBoundingBoxDescent": 11,
+		"actualBoundingBoxLeft": -3,
+		"actualBoundingBoxRight": 104,
+		"pixelBox": {
+			"x": 101,
+			"y": 94,
+			"width": 101,
+			"height": 101
+		},
+		"pngFileName": "放_108px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 108,
+		"advanceWidth": 108,
+		"fontBoundingBoxAscent": 93,
+		"fontBoundingBoxDescent": 15,
+		"actualBoundingBoxAscent": 89,
+		"actualBoundingBoxDescent": 12,
+		"actualBoundingBoxLeft": -6,
+		"actualBoundingBoxRight": 104,
+		"pixelBox": {
+			"x": 104,
+			"y": 95,
+			"width": 98,
+			"height": 101
+		},
+		"pngFileName": "轻_108px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 108,
+		"advanceWidth": 108,
+		"fontBoundingBoxAscent": 93,
+		"fontBoundingBoxDescent": 15,
+		"actualBoundingBoxAscent": 88,
+		"actualBoundingBoxDescent": 11,
+		"actualBoundingBoxLeft": -3,
+		"actualBoundingBoxRight": 105,
+		"pixelBox": {
+			"x": 101,
+			"y": 96,
+			"width": 102,
+			"height": 99
+		},
+		"pngFileName": "松_108px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "放",
+		"fontSize": 120,
+		"advanceWidth": 120,
+		"fontBoundingBoxAscent": 103,
+		"fontBoundingBoxDescent": 17,
+		"actualBoundingBoxAscent": 99,
+		"actualBoundingBoxDescent": 13,
+		"actualBoundingBoxLeft": -3,
+		"actualBoundingBoxRight": 116,
+		"pixelBox": {
+			"x": 112,
+			"y": 105,
+			"width": 112,
+			"height": 112
+		},
+		"pngFileName": "放_120px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "轻",
+		"fontSize": 120,
+		"advanceWidth": 120,
+		"fontBoundingBoxAscent": 103,
+		"fontBoundingBoxDescent": 17,
+		"actualBoundingBoxAscent": 99,
+		"actualBoundingBoxDescent": 13,
+		"actualBoundingBoxLeft": -7,
+		"actualBoundingBoxRight": 116,
+		"pixelBox": {
+			"x": 115,
+			"y": 105,
+			"width": 109,
+			"height": 112
+		},
+		"pngFileName": "轻_120px.png"
+	},
+	{
+		"fontFamily": "SimHei",
+		"char": "松",
+		"fontSize": 120,
+		"advanceWidth": 120,
+		"fontBoundingBoxAscent": 103,
+		"fontBoundingBoxDescent": 17,
+		"actualBoundingBoxAscent": 97,
+		"actualBoundingBoxDescent": 12,
+		"actualBoundingBoxLeft": -3,
+		"actualBoundingBoxRight": 117,
+		"pixelBox": {
+			"x": 111,
+			"y": 107,
+			"width": 113,
+			"height": 109
+		},
+		"pngFileName": "松_120px.png"
+	}
+]

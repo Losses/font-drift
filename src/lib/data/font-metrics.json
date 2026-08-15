@@ -1,0 +1,1850 @@
+{
+	"schema": 2,
+	"updated": "2026-08-14T23:29:04.810Z",
+	"referenceStrings": {
+		"cjk": "永是一的国我上不为和",
+		"cjkPunct": "，。、；：！？",
+		"latinLower": "navigation",
+		"latinUpper": "NAVIGATION",
+		"digits": "0123456789"
+	},
+	"fallbacks": [
+		{
+			"family": "Microsoft YaHei",
+			"local": ["Microsoft YaHei", "微软雅黑", "MicrosoftYaHei", "MicrosoftYaHeiRegular"],
+			"file": "chinese.msyh.ttf",
+			"tables": {
+				"familyName": "Microsoft YaHei",
+				"subfamilyName": "Regular",
+				"postscriptName": "MicrosoftYaHei",
+				"unitsPerEm": 2048,
+				"hhea": {
+					"ascender": 2167,
+					"descender": -536,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 1663,
+					"typoDescender": -519,
+					"typoLineGap": 9,
+					"winAscent": 2167,
+					"winDescent": 536,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "Microsoft YaHei"
+					},
+					{
+						"nameID": 4,
+						"value": "Microsoft YaHei"
+					},
+					{
+						"nameID": 6,
+						"value": "MicrosoftYaHei"
+					},
+					{
+						"nameID": 1,
+						"value": "Microsoft YaHei"
+					},
+					{
+						"nameID": 4,
+						"value": "Microsoft YaHei"
+					},
+					{
+						"nameID": 6,
+						"value": "MicrosoftYaHei"
+					},
+					{
+						"nameID": 1,
+						"value": "微软雅黑"
+					},
+					{
+						"nameID": 4,
+						"value": "微软雅黑"
+					},
+					{
+						"nameID": 6,
+						"value": "MicrosoftYaHeiRegular"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 106,
+				"descent": 26,
+				"inkAscent": 84,
+				"inkDescent": 26,
+				"lineBox": 132,
+				"widths": {
+					"cjk": 1000,
+					"cjkPunct": 700,
+					"latinLower": 504.296875,
+					"latinUpper": 629.00390625,
+					"digits": 586.42578125
+				}
+			}
+		},
+		{
+			"family": "PingFang SC Regular",
+			"local": [
+				"PingFang SC",
+				"苹方",
+				".PingFang SC",
+				"PingFang SC Regular",
+				"苹方 常规",
+				".PingFang SC Light",
+				".PingFang-SC-Light"
+			],
+			"file": "PingFang Regular.ttf",
+			"tables": {
+				"familyName": "PingFang SC Regular",
+				"subfamilyName": "Regular",
+				"postscriptName": "PingFang SC Regular",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 1060,
+					"descender": -340,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 860,
+					"typoDescender": -140,
+					"typoLineGap": 400,
+					"winAscent": 1060,
+					"winDescent": 340,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": ".PingFang SC"
+					},
+					{
+						"nameID": 4,
+						"value": ".PingFang SC Light"
+					},
+					{
+						"nameID": 6,
+						"value": ".PingFang-SC-Light"
+					},
+					{
+						"nameID": 1,
+						"value": "PingFang SC Regular"
+					},
+					{
+						"nameID": 4,
+						"value": "PingFang SC Regular"
+					},
+					{
+						"nameID": 6,
+						"value": "PingFang SC Regular"
+					},
+					{
+						"nameID": 16,
+						"value": "PingFang SC"
+					},
+					{
+						"nameID": 1,
+						"value": "苹方 常规"
+					},
+					{
+						"nameID": 4,
+						"value": "苹方 常规"
+					},
+					{
+						"nameID": 16,
+						"value": "苹方"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 106,
+				"descent": 34,
+				"inkAscent": 82,
+				"inkDescent": 21,
+				"lineBox": 140,
+				"widths": {
+					"cjk": 999.9990234375,
+					"cjkPunct": 699.9993896484375,
+					"latinLower": 466.8995361328125,
+					"latinUpper": 591.4994506835938,
+					"digits": 599.9993896484375
+				}
+			}
+		},
+		{
+			"family": "MiSans",
+			"local": ["MiSans", "MiSans Normal", "MiSans-Normal"],
+			"file": "MiSans-Normal.ttf",
+			"tables": {
+				"familyName": "MiSans",
+				"subfamilyName": "Normal",
+				"postscriptName": "MiSans-Normal",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 1044,
+					"descender": -282,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 890,
+					"typoDescender": -110,
+					"typoLineGap": 326,
+					"winAscent": 1044,
+					"winDescent": 282,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "MiSans"
+					},
+					{
+						"nameID": 4,
+						"value": "MiSans Normal"
+					},
+					{
+						"nameID": 6,
+						"value": "MiSans-Normal"
+					},
+					{
+						"nameID": 1,
+						"value": "MiSans"
+					},
+					{
+						"nameID": 4,
+						"value": "MiSans Normal"
+					},
+					{
+						"nameID": 1,
+						"value": "MiSans Normal"
+					},
+					{
+						"nameID": 4,
+						"value": "MiSans Normal"
+					},
+					{
+						"nameID": 6,
+						"value": "MiSans-Normal"
+					},
+					{
+						"nameID": 16,
+						"value": "MiSans"
+					},
+					{
+						"nameID": 1,
+						"value": "MiSans Normal"
+					},
+					{
+						"nameID": 4,
+						"value": "MiSans Normal"
+					},
+					{
+						"nameID": 16,
+						"value": "MiSans"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 104,
+				"descent": 28,
+				"inkAscent": 87,
+				"inkDescent": 22,
+				"lineBox": 132,
+				"widths": {
+					"cjk": 999.9990234375,
+					"cjkPunct": 699.9993896484375,
+					"latinLower": 470.8995666503906,
+					"latinUpper": 582.7994384765625,
+					"digits": 555.2994384765625
+				}
+			}
+		},
+		{
+			"family": "HarmonyOS Sans SC",
+			"local": ["HarmonyOS Sans SC", "HarmonyOS_Sans_SC"],
+			"file": "HarmonyOS_Sans_SC_Regular.ttf",
+			"tables": {
+				"familyName": "HarmonyOS Sans SC",
+				"subfamilyName": "Regular",
+				"postscriptName": "HarmonyOS_Sans_SC",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 928,
+					"descender": -244,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 1056,
+					"typoDescender": -271,
+					"typoLineGap": 0,
+					"winAscent": 1056,
+					"winDescent": 271,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "HarmonyOS Sans SC"
+					},
+					{
+						"nameID": 4,
+						"value": "HarmonyOS Sans SC"
+					},
+					{
+						"nameID": 6,
+						"value": "HarmonyOS_Sans_SC"
+					},
+					{
+						"nameID": 1,
+						"value": "HarmonyOS Sans SC"
+					},
+					{
+						"nameID": 4,
+						"value": "HarmonyOS Sans SC"
+					},
+					{
+						"nameID": 1,
+						"value": "HarmonyOS Sans SC"
+					},
+					{
+						"nameID": 4,
+						"value": "HarmonyOS Sans SC"
+					},
+					{
+						"nameID": 6,
+						"value": "HarmonyOS_Sans_SC"
+					},
+					{
+						"nameID": 1,
+						"value": "HarmonyOS Sans SC"
+					},
+					{
+						"nameID": 4,
+						"value": "HarmonyOS Sans SC"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 93,
+				"descent": 24,
+				"inkAscent": 86,
+				"inkDescent": 24,
+				"lineBox": 117,
+				"widths": {
+					"cjk": 999.9990234375,
+					"cjkPunct": 699.9993896484375,
+					"latinLower": 480.59954833984375,
+					"latinUpper": 585.7994384765625,
+					"digits": 569.9993896484375
+				}
+			}
+		},
+		{
+			"family": "OPPOSans R",
+			"local": ["OPPOSans", "OPPOSans R", "OPPOSans-R"],
+			"file": "OPPOSansRegular.ttf",
+			"tables": {
+				"familyName": "OPPOSans R",
+				"subfamilyName": "Regular",
+				"postscriptName": "OPPOSans-R",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 1000,
+					"descender": -319,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 850,
+					"typoDescender": -150,
+					"typoLineGap": 0,
+					"winAscent": 1000,
+					"winDescent": 319,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "OPPOSans R"
+					},
+					{
+						"nameID": 4,
+						"value": "OPPOSans R"
+					},
+					{
+						"nameID": 6,
+						"value": "OPPOSans-R"
+					},
+					{
+						"nameID": 16,
+						"value": "OPPOSans"
+					},
+					{
+						"nameID": 1,
+						"value": "OPPOSans R"
+					},
+					{
+						"nameID": 4,
+						"value": "OPPOSans-R"
+					},
+					{
+						"nameID": 16,
+						"value": "OPPOSans"
+					},
+					{
+						"nameID": 1,
+						"value": "OPPOSans R"
+					},
+					{
+						"nameID": 4,
+						"value": "OPPOSans R"
+					},
+					{
+						"nameID": 6,
+						"value": "OPPOSans-R"
+					},
+					{
+						"nameID": 16,
+						"value": "OPPOSans"
+					},
+					{
+						"nameID": 1,
+						"value": "OPPOSans R"
+					},
+					{
+						"nameID": 4,
+						"value": "OPPOSans R"
+					},
+					{
+						"nameID": 16,
+						"value": "OPPOSans"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 100,
+				"descent": 32,
+				"inkAscent": 85,
+				"inkDescent": 28,
+				"lineBox": 132,
+				"widths": {
+					"cjk": 999.9990234375,
+					"cjkPunct": 699.9993896484375,
+					"latinLower": 507.5994873046875,
+					"latinUpper": 609.2994384765625,
+					"digits": 590.5994873046875
+				}
+			}
+		},
+		{
+			"family": "HONOR Sans",
+			"local": ["HONOR Sans", "HONORSans-Regular"],
+			"file": "HONORSans-Regular.ttf",
+			"tables": {
+				"familyName": "HONOR Sans",
+				"subfamilyName": "Regular",
+				"postscriptName": "HONORSans-Regular",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 928,
+					"descender": -244,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 1048,
+					"typoDescender": -271,
+					"typoLineGap": 0,
+					"winAscent": 1048,
+					"winDescent": 271,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "HONOR Sans"
+					},
+					{
+						"nameID": 4,
+						"value": "HONOR Sans"
+					},
+					{
+						"nameID": 6,
+						"value": "HONORSans-Regular"
+					},
+					{
+						"nameID": 1,
+						"value": "HONOR Sans"
+					},
+					{
+						"nameID": 4,
+						"value": "HONOR Sans"
+					},
+					{
+						"nameID": 1,
+						"value": "HONOR Sans"
+					},
+					{
+						"nameID": 4,
+						"value": "HONOR Sans"
+					},
+					{
+						"nameID": 6,
+						"value": "HONORSans-Regular"
+					},
+					{
+						"nameID": 16,
+						"value": "HONOR Sans"
+					},
+					{
+						"nameID": 1,
+						"value": "HONOR Sans"
+					},
+					{
+						"nameID": 16,
+						"value": "HONOR Sans"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 93,
+				"descent": 24,
+				"inkAscent": 82,
+				"inkDescent": 21,
+				"lineBox": 118,
+				"widths": {
+					"cjk": 1000,
+					"cjkPunct": 700,
+					"latinLower": 470.69952392578125,
+					"latinUpper": 578.9994506835938,
+					"digits": 572.9993896484375
+				}
+			}
+		},
+		{
+			"family": "vivo Sans Global",
+			"local": ["vivo Sans Global", "vivo Sans Global Regular", "vivoSansGlobal-Regular"],
+			"file": "vivoSansGlobal-Regular.ttf",
+			"tables": {
+				"familyName": "vivo Sans Global",
+				"subfamilyName": "Regular",
+				"postscriptName": "vivoSansGlobal-Regular",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 1090,
+					"descender": -720,
+					"lineGap": 200
+				},
+				"os2": {
+					"typoAscender": 1090,
+					"typoDescender": -720,
+					"typoLineGap": 200,
+					"winAscent": 1090,
+					"winDescent": 720,
+					"useTypoMetrics": true
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "vivo Sans Global"
+					},
+					{
+						"nameID": 4,
+						"value": "vivo Sans Global Regular"
+					},
+					{
+						"nameID": 6,
+						"value": "vivoSansGlobal-Regular"
+					},
+					{
+						"nameID": 1,
+						"value": "vivo Sans Global"
+					},
+					{
+						"nameID": 4,
+						"value": "vivo Sans Global Regular"
+					},
+					{
+						"nameID": 6,
+						"value": "vivoSansGlobal-Regular"
+					},
+					{
+						"nameID": 16,
+						"value": "vivo Sans Global"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 109,
+				"descent": 72,
+				"inkAscent": 82,
+				"inkDescent": 26,
+				"lineBox": 201,
+				"widths": {
+					"cjk": 1000,
+					"cjkPunct": 700,
+					"latinLower": 489.69952392578125,
+					"latinUpper": 613.099365234375,
+					"digits": 561.3994140625
+				}
+			}
+		},
+		{
+			"family": "Heiti SC",
+			"local": [
+				"Heiti SC",
+				"黑體-簡",
+				"黒体-簡",
+				"Heiti-간체",
+				"黑体-简",
+				"Heiti SC Medium",
+				"黑體-簡 中黑",
+				"黒体-簡 ミディアム",
+				"Heiti-간체 중간체",
+				"黑体-简 中等",
+				"STHeitiSC-Medium"
+			],
+			"file": "heiti-sc-medium.ttf",
+			"tables": {
+				"familyName": "Heiti SC",
+				"subfamilyName": "Medium",
+				"postscriptName": "STHeitiSC-Medium",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 860,
+					"descender": -140,
+					"lineGap": 30
+				},
+				"os2": {
+					"typoAscender": 860,
+					"typoDescender": -140,
+					"typoLineGap": 30,
+					"winAscent": 860,
+					"winDescent": 140,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "Heiti SC"
+					},
+					{
+						"nameID": 4,
+						"value": "Heiti SC Medium"
+					},
+					{
+						"nameID": 6,
+						"value": "STHeitiSC-Medium"
+					},
+					{
+						"nameID": 1,
+						"value": "黑體-簡"
+					},
+					{
+						"nameID": 4,
+						"value": "黑體-簡 中黑"
+					},
+					{
+						"nameID": 1,
+						"value": "Heiti SC"
+					},
+					{
+						"nameID": 4,
+						"value": "Heiti SC Medium"
+					},
+					{
+						"nameID": 6,
+						"value": "STHeitiSC-Medium"
+					},
+					{
+						"nameID": 1,
+						"value": "黒体-簡"
+					},
+					{
+						"nameID": 4,
+						"value": "黒体-簡 ミディアム"
+					},
+					{
+						"nameID": 1,
+						"value": "Heiti-간체"
+					},
+					{
+						"nameID": 4,
+						"value": "Heiti-간체 중간체"
+					},
+					{
+						"nameID": 1,
+						"value": "黑体-简"
+					},
+					{
+						"nameID": 4,
+						"value": "黑体-简 中等"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 86,
+				"descent": 14,
+				"inkAscent": 83,
+				"inkDescent": 13,
+				"lineBox": 103,
+				"widths": {
+					"cjk": 999.9990234375,
+					"cjkPunct": 699.9993896484375,
+					"latinLower": 520.6995239257812,
+					"latinUpper": 628.099365234375,
+					"digits": 553.99951171875
+				}
+			}
+		},
+		{
+			"family": "Hiragino Sans GB",
+			"local": ["Hiragino Sans GB", "Hiragino Sans GB W3", "HiraginoSansGB-W3"],
+			"file": "Hiragino Sans GB W3.otf",
+			"tables": {
+				"familyName": "Hiragino Sans GB",
+				"subfamilyName": "W3",
+				"postscriptName": "HiraginoSansGB-W3",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 880,
+					"descender": -120,
+					"lineGap": 500
+				},
+				"os2": {
+					"typoAscender": 880,
+					"typoDescender": -120,
+					"typoLineGap": 500,
+					"winAscent": 951,
+					"winDescent": 209,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "Hiragino Sans GB"
+					},
+					{
+						"nameID": 4,
+						"value": "Hiragino Sans GB W3"
+					},
+					{
+						"nameID": 6,
+						"value": "HiraginoSansGB-W3"
+					},
+					{
+						"nameID": 1,
+						"value": "Hiragino Sans GB"
+					},
+					{
+						"nameID": 4,
+						"value": "Hiragino Sans GB W3"
+					},
+					{
+						"nameID": 6,
+						"value": "HiraginoSansGB-W3"
+					},
+					{
+						"nameID": 1,
+						"value": "Hiragino Sans GB W3"
+					},
+					{
+						"nameID": 4,
+						"value": "Hiragino Sans GB W3"
+					},
+					{
+						"nameID": 6,
+						"value": "HiraginoSansGB-W3"
+					},
+					{
+						"nameID": 16,
+						"value": "Hiragino Sans GB"
+					},
+					{
+						"nameID": 1,
+						"value": "Hiragino Sans GB W3"
+					},
+					{
+						"nameID": 4,
+						"value": "Hiragino Sans GB W3"
+					},
+					{
+						"nameID": 6,
+						"value": "HiraginoSansGB-W3"
+					},
+					{
+						"nameID": 16,
+						"value": "Hiragino Sans GB"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 88,
+				"descent": 12,
+				"inkAscent": 85,
+				"inkDescent": 21,
+				"lineBox": 150,
+				"widths": {
+					"cjk": 999.9990234375,
+					"cjkPunct": 599.9993896484375,
+					"latinLower": 506.3995056152344,
+					"latinUpper": 646.099365234375,
+					"digits": 657.3993530273438
+				}
+			}
+		},
+		{
+			"family": "Heiti TC",
+			"local": [
+				"Heiti TC",
+				"黑體-繁",
+				"黒体-繁",
+				"Heiti-번체",
+				"黑体-繁",
+				"Heiti TC Medium",
+				"黑體-繁 中黑",
+				"黒体-繁 ミディアム",
+				"Heiti-번체 중간체",
+				"黑体-繁 中等",
+				"STHeitiTC-Medium"
+			],
+			"file": "STHeiti Medium.ttc",
+			"tables": {
+				"familyName": "Heiti TC",
+				"subfamilyName": "Medium",
+				"postscriptName": "STHeitiTC-Medium",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 860,
+					"descender": -140,
+					"lineGap": 30
+				},
+				"os2": {
+					"typoAscender": 860,
+					"typoDescender": -140,
+					"typoLineGap": 30,
+					"winAscent": 860,
+					"winDescent": 140,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 2,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "Heiti TC"
+					},
+					{
+						"nameID": 4,
+						"value": "Heiti TC Medium"
+					},
+					{
+						"nameID": 6,
+						"value": "STHeitiTC-Medium"
+					},
+					{
+						"nameID": 1,
+						"value": "黑體-繁"
+					},
+					{
+						"nameID": 4,
+						"value": "黑體-繁 中黑"
+					},
+					{
+						"nameID": 1,
+						"value": "Heiti TC"
+					},
+					{
+						"nameID": 4,
+						"value": "Heiti TC Medium"
+					},
+					{
+						"nameID": 1,
+						"value": "黒体-繁"
+					},
+					{
+						"nameID": 4,
+						"value": "黒体-繁 ミディアム"
+					},
+					{
+						"nameID": 1,
+						"value": "Heiti-번체"
+					},
+					{
+						"nameID": 4,
+						"value": "Heiti-번체 중간체"
+					},
+					{
+						"nameID": 1,
+						"value": "黑体-繁"
+					},
+					{
+						"nameID": 4,
+						"value": "黑体-繁 中等"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 86,
+				"descent": 14,
+				"inkAscent": 83,
+				"inkDescent": 13,
+				"lineBox": 103,
+				"widths": {
+					"cjk": 999.9990234375,
+					"cjkPunct": 699.9993896484375,
+					"latinLower": 520.6995239257812,
+					"latinUpper": 628.099365234375,
+					"digits": 553.99951171875
+				}
+			}
+		},
+		{
+			"family": "STXihei",
+			"local": ["STXihei", "华文细黑", "ＳＴＸｉｈｅｉ"],
+			"file": "STXihei.TTF",
+			"tables": {
+				"familyName": "STXihei",
+				"subfamilyName": "Regular",
+				"postscriptName": "STXihei",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 1070,
+					"descender": -307,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 800,
+					"typoDescender": -200,
+					"typoLineGap": 144,
+					"winAscent": 871,
+					"winDescent": 208,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "STXihei"
+					},
+					{
+						"nameID": 4,
+						"value": "STXihei"
+					},
+					{
+						"nameID": 6,
+						"value": "STXihei"
+					},
+					{
+						"nameID": 1,
+						"value": "STXihei"
+					},
+					{
+						"nameID": 4,
+						"value": "STXihei"
+					},
+					{
+						"nameID": 6,
+						"value": "STXihei"
+					},
+					{
+						"nameID": 1,
+						"value": "华文细黑"
+					},
+					{
+						"nameID": 4,
+						"value": "华文细黑"
+					},
+					{
+						"nameID": 6,
+						"value": "ＳＴＸｉｈｅｉ"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 107,
+				"descent": 31,
+				"inkAscent": 78,
+				"inkDescent": 20,
+				"lineBox": 138,
+				"widths": {
+					"cjk": 999.9990234375,
+					"cjkPunct": 699.9993896484375,
+					"latinLower": 520.6995239257812,
+					"latinUpper": 628.099365234375,
+					"digits": 553.99951171875
+				}
+			}
+		},
+		{
+			"family": "LiHei Pro",
+			"local": ["LiHei Pro", "儷黑 Pro", "LiHeiPro"],
+			"file": "LiHei Pro.ttf",
+			"tables": {
+				"familyName": "LiHei Pro",
+				"subfamilyName": "Medium",
+				"postscriptName": "LiHeiPro",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 860,
+					"descender": -140,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 860,
+					"typoDescender": -140,
+					"typoLineGap": 140,
+					"winAscent": 860,
+					"winDescent": 140,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "LiHei Pro"
+					},
+					{
+						"nameID": 4,
+						"value": "LiHei Pro"
+					},
+					{
+						"nameID": 6,
+						"value": "LiHeiPro"
+					},
+					{
+						"nameID": 1,
+						"value": "儷黑 Pro"
+					},
+					{
+						"nameID": 4,
+						"value": "儷黑 Pro"
+					},
+					{
+						"nameID": 6,
+						"value": "LiHeiPro"
+					},
+					{
+						"nameID": 1,
+						"value": "LiHei Pro"
+					},
+					{
+						"nameID": 4,
+						"value": "LiHei Pro"
+					},
+					{
+						"nameID": 6,
+						"value": "LiHeiPro"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 86,
+				"descent": 14,
+				"inkAscent": 82,
+				"inkDescent": 14,
+				"lineBox": 118,
+				"widths": {
+					"cjk": 999.9991455078125,
+					"cjkPunct": 699.9993896484375,
+					"latinLower": 483.09954833984375,
+					"latinUpper": 627.2993774414062,
+					"digits": 649.9993896484375
+				}
+			}
+		},
+		{
+			"family": "Lantinghei SC",
+			"local": [
+				"蘭亭黑-簡",
+				"Lantinghei SC",
+				"兰亭黑-简",
+				"Lantinghei SC Demibold",
+				"蘭亭黑-簡 中黑 ",
+				"兰亭黑-简 中黑",
+				"FZLTZHK--GBK1-0"
+			],
+			"file": "Lantinghei.ttc",
+			"tables": {
+				"familyName": "Lantinghei SC",
+				"subfamilyName": "Demibold",
+				"postscriptName": "FZLTZHK--GBK1-0",
+				"unitsPerEm": 256,
+				"hhea": {
+					"ascender": 263,
+					"descender": -93,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 229,
+					"typoDescender": -72,
+					"typoLineGap": 25,
+					"winAscent": 229,
+					"winDescent": 72,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 6,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "Lantinghei SC"
+					},
+					{
+						"nameID": 4,
+						"value": "Lantinghei SC Demibold"
+					},
+					{
+						"nameID": 1,
+						"value": "蘭亭黑-簡"
+					},
+					{
+						"nameID": 4,
+						"value": "蘭亭黑-簡 中黑 "
+					},
+					{
+						"nameID": 16,
+						"value": "蘭亭黑-簡"
+					},
+					{
+						"nameID": 1,
+						"value": "Lantinghei SC"
+					},
+					{
+						"nameID": 4,
+						"value": "Lantinghei SC Demibold"
+					},
+					{
+						"nameID": 6,
+						"value": "FZLTZHK--GBK1-0"
+					},
+					{
+						"nameID": 16,
+						"value": "Lantinghei SC"
+					},
+					{
+						"nameID": 1,
+						"value": "兰亭黑-简"
+					},
+					{
+						"nameID": 4,
+						"value": "兰亭黑-简 中黑"
+					},
+					{
+						"nameID": 16,
+						"value": "兰亭黑-简"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 103,
+				"descent": 36,
+				"inkAscent": 84,
+				"inkDescent": 28,
+				"lineBox": 139,
+				"widths": {
+					"cjk": 1000,
+					"cjkPunct": 700,
+					"latinLower": 548.828125,
+					"latinUpper": 718.359375,
+					"digits": 650.390625
+				}
+			}
+		},
+		{
+			"family": "Microsoft JhengHei",
+			"local": ["Microsoft JhengHei", "微軟正黑體", "MicrosoftJhengHeiRegular"],
+			"file": "Microsoft JhengHei Regular.ttf",
+			"tables": {
+				"familyName": "Microsoft JhengHei",
+				"subfamilyName": "Regular",
+				"postscriptName": "MicrosoftJhengHeiRegular",
+				"unitsPerEm": 2048,
+				"hhea": {
+					"ascender": 2203,
+					"descender": -521,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 1823,
+					"typoDescender": -225,
+					"typoLineGap": 0,
+					"winAscent": 2203,
+					"winDescent": 521,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "Microsoft JhengHei"
+					},
+					{
+						"nameID": 4,
+						"value": "Microsoft JhengHei"
+					},
+					{
+						"nameID": 6,
+						"value": "MicrosoftJhengHeiRegular"
+					},
+					{
+						"nameID": 1,
+						"value": "微軟正黑體"
+					},
+					{
+						"nameID": 4,
+						"value": "微軟正黑體"
+					},
+					{
+						"nameID": 6,
+						"value": "MicrosoftJhengHeiRegular"
+					},
+					{
+						"nameID": 1,
+						"value": "Microsoft JhengHei"
+					},
+					{
+						"nameID": 4,
+						"value": "Microsoft JhengHei"
+					},
+					{
+						"nameID": 6,
+						"value": "MicrosoftJhengHeiRegular"
+					},
+					{
+						"nameID": 1,
+						"value": "微軟正黑體"
+					},
+					{
+						"nameID": 4,
+						"value": "微軟正黑體"
+					},
+					{
+						"nameID": 6,
+						"value": "MicrosoftJhengHeiRegular"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 108,
+				"descent": 25,
+				"inkAscent": 84,
+				"inkDescent": 26,
+				"lineBox": 133,
+				"widths": {
+					"cjk": 1000,
+					"cjkPunct": 700,
+					"latinLower": 497.021484375,
+					"latinUpper": 620.703125,
+					"digits": 579.58984375
+				}
+			}
+		},
+		{
+			"family": "SimHei",
+			"local": ["SimHei", "黑体"],
+			"file": "SimHei.ttf",
+			"tables": {
+				"familyName": "SimHei",
+				"subfamilyName": "Regular",
+				"postscriptName": "SimHei",
+				"unitsPerEm": 256,
+				"hhea": {
+					"ascender": 220,
+					"descender": -36,
+					"lineGap": 36
+				},
+				"os2": {
+					"typoAscender": 220,
+					"typoDescender": -36,
+					"typoLineGap": 36,
+					"winAscent": 220,
+					"winDescent": 36,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "SimHei"
+					},
+					{
+						"nameID": 4,
+						"value": "SimHei"
+					},
+					{
+						"nameID": 6,
+						"value": "SimHei"
+					},
+					{
+						"nameID": 1,
+						"value": "SimHei"
+					},
+					{
+						"nameID": 4,
+						"value": "SimHei"
+					},
+					{
+						"nameID": 6,
+						"value": "SimHei"
+					},
+					{
+						"nameID": 1,
+						"value": "黑体"
+					},
+					{
+						"nameID": 4,
+						"value": "黑体"
+					},
+					{
+						"nameID": 6,
+						"value": "黑体"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 86,
+				"descent": 14,
+				"inkAscent": 83,
+				"inkDescent": 16,
+				"lineBox": 114,
+				"widths": {
+					"cjk": 1000,
+					"cjkPunct": 700,
+					"latinLower": 500,
+					"latinUpper": 500,
+					"digits": 500
+				}
+			}
+		},
+		{
+			"family": "Noto Sans SC",
+			"local": ["Noto Sans SC", "Noto Sans SC Regular", "NotoSansSC-Regular"],
+			"file": "NotoSansSC-Regular.ttf",
+			"tables": {
+				"familyName": "Noto Sans SC",
+				"subfamilyName": "Regular",
+				"postscriptName": "NotoSansSC-Regular",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 1160,
+					"descender": -288,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 880,
+					"typoDescender": -120,
+					"typoLineGap": 0,
+					"winAscent": 1160,
+					"winDescent": 288,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "Noto Sans SC"
+					},
+					{
+						"nameID": 4,
+						"value": "Noto Sans SC Regular"
+					},
+					{
+						"nameID": 6,
+						"value": "NotoSansSC-Regular"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 116,
+				"descent": 29,
+				"inkAscent": 85,
+				"inkDescent": 25,
+				"lineBox": 145,
+				"widths": {
+					"cjk": 999.9990234375,
+					"cjkPunct": 599.9993896484375,
+					"latinLower": 492.5994873046875,
+					"latinUpper": 576.4994506835938,
+					"digits": 554.99951171875
+				}
+			}
+		},
+		{
+			"family": "Source Han Sans SC",
+			"local": ["Source Han Sans SC", "思源黑体", "SourceHanSansSC-Regular"],
+			"file": "SourceHanSansSC-Regular.otf",
+			"tables": {
+				"familyName": "Source Han Sans SC",
+				"subfamilyName": "Regular",
+				"postscriptName": "SourceHanSansSC-Regular",
+				"unitsPerEm": 1000,
+				"hhea": {
+					"ascender": 1160,
+					"descender": -288,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 880,
+					"typoDescender": -120,
+					"typoLineGap": 0,
+					"winAscent": 1160,
+					"winDescent": 288,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "Source Han Sans SC"
+					},
+					{
+						"nameID": 4,
+						"value": "Source Han Sans SC"
+					},
+					{
+						"nameID": 6,
+						"value": "SourceHanSansSC-Regular"
+					},
+					{
+						"nameID": 1,
+						"value": "思源黑体"
+					},
+					{
+						"nameID": 4,
+						"value": "思源黑体"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 116,
+				"descent": 29,
+				"inkAscent": 85,
+				"inkDescent": 25,
+				"lineBox": 145,
+				"widths": {
+					"cjk": 999.9990234375,
+					"cjkPunct": 599.9993896484375,
+					"latinLower": 493.0994873046875,
+					"latinUpper": 577.2994384765625,
+					"digits": 554.99951171875
+				}
+			}
+		},
+		{
+			"family": "WenQuanYi Micro Hei",
+			"local": ["WenQuanYi Micro Hei", "文泉驛微米黑", "文泉驿微米黑", "WenQuanYiMicroHei"],
+			"file": "wqy-microhei.ttc",
+			"tables": {
+				"familyName": "WenQuanYi Micro Hei",
+				"subfamilyName": "Regular",
+				"postscriptName": "WenQuanYiMicroHei",
+				"unitsPerEm": 2048,
+				"hhea": {
+					"ascender": 1918,
+					"descender": -483,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 1567,
+					"typoDescender": -492,
+					"typoLineGap": 132,
+					"winAscent": 1918,
+					"winDescent": 483,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 2,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "WenQuanYi Micro Hei"
+					},
+					{
+						"nameID": 4,
+						"value": "WenQuanYi Micro Hei"
+					},
+					{
+						"nameID": 6,
+						"value": "WenQuanYiMicroHei"
+					},
+					{
+						"nameID": 1,
+						"value": "文泉驛微米黑"
+					},
+					{
+						"nameID": 4,
+						"value": "文泉驛微米黑"
+					},
+					{
+						"nameID": 1,
+						"value": "WenQuanYi Micro Hei"
+					},
+					{
+						"nameID": 4,
+						"value": "WenQuanYi Micro Hei"
+					},
+					{
+						"nameID": 6,
+						"value": "WenQuanYiMicroHei"
+					},
+					{
+						"nameID": 1,
+						"value": "文泉驿微米黑"
+					},
+					{
+						"nameID": 4,
+						"value": "文泉驿微米黑"
+					},
+					{
+						"nameID": 1,
+						"value": "文泉驛微米黑"
+					},
+					{
+						"nameID": 4,
+						"value": "文泉驛微米黑"
+					},
+					{
+						"nameID": 1,
+						"value": "文泉驿微米黑"
+					},
+					{
+						"nameID": 4,
+						"value": "文泉驿微米黑"
+					},
+					{
+						"nameID": 1,
+						"value": "文泉驛微米黑"
+					},
+					{
+						"nameID": 4,
+						"value": "文泉驛微米黑"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 94,
+				"descent": 24,
+				"inkAscent": 82,
+				"inkDescent": 24,
+				"lineBox": 118,
+				"widths": {
+					"cjk": 1000,
+					"cjkPunct": 700,
+					"latinLower": 466.9921875,
+					"latinUpper": 576.07421875,
+					"digits": 550.78125
+				}
+			}
+		},
+		{
+			"family": "WenQuanYi Zen Hei",
+			"local": ["WenQuanYi Zen Hei", "文泉驛正黑", "文泉驿正黑", "WenQuanYiZenHei"],
+			"file": "wqy-zenhei.ttc",
+			"tables": {
+				"familyName": "WenQuanYi Zen Hei",
+				"subfamilyName": "Regular",
+				"postscriptName": "WenQuanYiZenHei",
+				"unitsPerEm": 1024,
+				"hhea": {
+					"ascender": 986,
+					"descender": -304,
+					"lineGap": 92
+				},
+				"os2": {
+					"typoAscender": 819,
+					"typoDescender": -205,
+					"typoLineGap": 92,
+					"winAscent": 986,
+					"winDescent": 304,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 3,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "WenQuanYi Zen Hei"
+					},
+					{
+						"nameID": 4,
+						"value": "WenQuanYi Zen Hei"
+					},
+					{
+						"nameID": 6,
+						"value": "WenQuanYiZenHei"
+					},
+					{
+						"nameID": 1,
+						"value": "文泉驛正黑"
+					},
+					{
+						"nameID": 4,
+						"value": "文泉驛正黑"
+					},
+					{
+						"nameID": 1,
+						"value": "WenQuanYi Zen Hei"
+					},
+					{
+						"nameID": 4,
+						"value": "WenQuanYi Zen Hei"
+					},
+					{
+						"nameID": 6,
+						"value": "WenQuanYiZenHei"
+					},
+					{
+						"nameID": 1,
+						"value": "文泉驿正黑"
+					},
+					{
+						"nameID": 4,
+						"value": "文泉驿正黑"
+					},
+					{
+						"nameID": 1,
+						"value": "文泉驛正黑"
+					},
+					{
+						"nameID": 4,
+						"value": "文泉驿正黑"
+					},
+					{
+						"nameID": 1,
+						"value": "文泉驛正黑"
+					},
+					{
+						"nameID": 4,
+						"value": "文泉驛正黑"
+					},
+					{
+						"nameID": 1,
+						"value": "文泉驛正黑"
+					},
+					{
+						"nameID": 4,
+						"value": "文泉驛正黑"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 96,
+				"descent": 30,
+				"inkAscent": 86,
+				"inkDescent": 19,
+				"lineBox": 135,
+				"widths": {
+					"cjk": 1000,
+					"cjkPunct": 700,
+					"latinLower": 443.26171875,
+					"latinUpper": 533.49609375,
+					"digits": 599.609375
+				}
+			}
+		},
+		{
+			"family": "Droid Sans Fallback",
+			"local": ["Droid Sans Fallback", "DroidSansFallback"],
+			"file": "DroidSansFallback.ttf",
+			"tables": {
+				"familyName": "Droid Sans Fallback",
+				"subfamilyName": "Regular",
+				"postscriptName": "DroidSansFallback",
+				"unitsPerEm": 256,
+				"hhea": {
+					"ascender": 267,
+					"descender": -68,
+					"lineGap": 0
+				},
+				"os2": {
+					"typoAscender": 196,
+					"typoDescender": -61,
+					"typoLineGap": 16,
+					"winAscent": 267,
+					"winDescent": 68,
+					"useTypoMetrics": false
+				},
+				"collectionFaces": 1,
+				"nameRecords": [
+					{
+						"nameID": 1,
+						"value": "Droid Sans Fallback"
+					},
+					{
+						"nameID": 4,
+						"value": "Droid Sans Fallback"
+					},
+					{
+						"nameID": 6,
+						"value": "DroidSansFallback"
+					},
+					{
+						"nameID": 1,
+						"value": "Droid Sans Fallback"
+					},
+					{
+						"nameID": 4,
+						"value": "Droid Sans Fallback"
+					},
+					{
+						"nameID": 6,
+						"value": "DroidSansFallback"
+					}
+				]
+			},
+			"browser": {
+				"ascent": 104,
+				"descent": 27,
+				"inkAscent": 82,
+				"inkDescent": 24,
+				"lineBox": 131,
+				"widths": {
+					"cjk": 1000,
+					"cjkPunct": 700,
+					"latinLower": 467.578125,
+					"latinUpper": 576.5625,
+					"digits": 550.78125
+				}
+			}
+		}
+	],
+	"webfont": {
+		"family": "IBM Plex Sans SC",
+		"css": ["IBMPlexSansSC-Medium.css", "IBMPlexSansSC-Bold.css"],
+		"tablesFrom": "IBMPlexSansSC-Medium.otf",
+		"tables": {
+			"familyName": "IBM Plex Sans SC Medm",
+			"subfamilyName": "Regular",
+			"postscriptName": "IBMPlexSansSC-Medm",
+			"unitsPerEm": 1000,
+			"hhea": {
+				"ascender": 880,
+				"descender": -120,
+				"lineGap": 1000
+			},
+			"os2": {
+				"typoAscender": 880,
+				"typoDescender": -120,
+				"typoLineGap": 1000,
+				"winAscent": 1060,
+				"winDescent": 440,
+				"useTypoMetrics": false
+			},
+			"collectionFaces": 1,
+			"nameRecords": [
+				{
+					"nameID": 1,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 4,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 6,
+					"value": "IBMPlexSansSC-Medm"
+				},
+				{
+					"nameID": 16,
+					"value": "IBM Plex Sans SC"
+				},
+				{
+					"nameID": 1,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 4,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 16,
+					"value": "IBM Plex Sans SC"
+				},
+				{
+					"nameID": 1,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 4,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 16,
+					"value": "IBM Plex Sans SC"
+				},
+				{
+					"nameID": 1,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 4,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 16,
+					"value": "IBM Plex Sans SC"
+				},
+				{
+					"nameID": 1,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 4,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 6,
+					"value": "IBMPlexSansSC-Medm"
+				},
+				{
+					"nameID": 16,
+					"value": "IBM Plex Sans SC"
+				},
+				{
+					"nameID": 1,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 4,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 16,
+					"value": "IBM Plex Sans SC"
+				},
+				{
+					"nameID": 1,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 4,
+					"value": "IBM Plex Sans SC Medm"
+				},
+				{
+					"nameID": 16,
+					"value": "IBM Plex Sans SC"
+				}
+			]
+		},
+		"browser": {
+			"ascent": 88,
+			"descent": 12,
+			"inkAscent": 85,
+			"inkDescent": 22,
+			"lineBox": 200,
+			"widths": {
+				"cjk": 999.9990234375,
+				"cjkPunct": 599.9993896484375,
+				"latinLower": 496.79949951171875,
+				"latinUpper": 636.4993896484375,
+				"digits": 629.8994140625
+			}
+		}
+	}
+}
