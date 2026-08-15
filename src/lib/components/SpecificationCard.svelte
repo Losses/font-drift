@@ -33,19 +33,19 @@
 		</div>
 		<div class="spec-body">
 			<div class="card-row-item spec-row">
-				<span class="text-label-muted">TARGET:</span>
+				<span class="text-label-muted">TARGET</span>
 				<span class="spec-value color-target-font">{targetFont.family}</span>
 			</div>
 			<div class="card-row-item spec-row">
-				<span class="text-label-muted">BASE:</span>
+				<span class="text-label-muted">BASE</span>
 				<span class="spec-value color-base-font">{baseFont.family}</span>
 			</div>
 			<div class="card-row-item spec-row spec-row-divider">
-				<span class="text-label">SIZE-ADJUST:</span>
+				<span class="text-label">SIZE-ADJUST</span>
 				<span class="spec-value text-label">{(alignmentCss.sizeAdjust * 100).toFixed(2)}%</span>
 			</div>
 			<div class="card-row-item spec-row">
-				<span class="text-label">TONSKY SHIFT:</span>
+				<span class="text-label">TONSKY SHIFT</span>
 				<span class="spec-value text-label"
 					>{(alignmentCss.cjkOffsetEm * fontSize).toFixed(1)}px</span
 				>
@@ -54,23 +54,23 @@
 			<!-- MERGED CALLOUT METRICS FOR NARROW SCREENS (AUTOMATICALLY ACTIVATED WHEN SCREEN IS NARROW) -->
 			{#if isNarrowScreen}
 				<div class="card-row-item spec-row spec-row-divider">
-					<span class="text-label-muted">ASCENDER:</span>
+					<span class="text-label-muted">ASCENDER</span>
 					<span class="spec-value text-label">{ascenderVal}</span>
 				</div>
 				<div class="card-row-item spec-row">
-					<span class="text-label-muted">CAP HEIGHT:</span>
+					<span class="text-label-muted">CAP HEIGHT</span>
 					<span class="spec-value text-label">{capHeightVal}</span>
 				</div>
 				<div class="card-row-item spec-row">
-					<span class="text-label-muted">OPTICAL CENTER:</span>
+					<span class="text-label-muted">OPTICAL CENTER</span>
 					<span class="spec-value text-label">{opticalVal}</span>
 				</div>
 				<div class="card-row-item spec-row">
-					<span class="text-label-muted">BASELINE:</span>
+					<span class="text-label-muted">BASELINE</span>
 					<span class="spec-value text-label">{baselineVal}</span>
 				</div>
 				<div class="card-row-item spec-row">
-					<span class="text-label-muted">DESCENDER:</span>
+					<span class="text-label-muted">DESCENDER</span>
 					<span class="spec-value text-label">{descenderVal}</span>
 				</div>
 			{/if}
