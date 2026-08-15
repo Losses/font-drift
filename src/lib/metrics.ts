@@ -24,7 +24,7 @@ export const DEFAULT_BASE_FONT: CustomFont = {
 	browserDescent: 12,
 	browserInkAscent: 84,
 	browserInkDescent: 26,
-	lineBox: 200,
+	lineBox: 100, // PingFang SC native lineBox (100% = 1.0em, 0% line gap)
 	cjkWidth: 100.0
 };
 
@@ -48,7 +48,7 @@ export function measureFontInBrowser(
 			descent: 12,
 			inkAscent: 84,
 			inkDescent: 26,
-			lineBox: 200,
+			lineBox: 100,
 			cjkWidth: 100.0
 		};
 	}
@@ -173,19 +173,21 @@ export function fallbackToCustomFont(entry: FallbackEntry): CustomFont {
 const pct = (v: number, digits = 4) => `${(v * 100).toFixed(digits)}%`;
 
 /**
- * Calculate Metric Overrides CSS based on exact bin/font-fallback/generate.ts logic from blog3
+ * Calculate Metric Overrides CSS based on exact bin/font-fallback/generate.ts logic
  */
 export function calculateAlignmentCss(
 	target: CustomFont,
 	base: CustomFont = DEFAULT_BASE_FONT
 ): GeneratedCssResult {
 	const k = base.cjkWidth > 0 && target.cjkWidth > 0 ? base.cjkWidth / target.cjkWidth : 1.0;
-	const gapFromTables = (base.lineBox - base.browserAscent - base.browserDescent) / 100;
+
+	// Base font native line gap (PingFang SC line gap is 0%)
+	const baseGapRatio = Math.max(0, (base.lineBox - base.browserAscent - base.browserDescent) / 100);
 
 	const sizeAdjustRatio = k;
 	const ascentOverrideRatio = base.browserAscent / (k * 100);
 	const descentOverrideRatio = base.browserDescent / (k * 100);
-	const lineGapOverrideRatio = gapFromTables / k;
+	const lineGapOverrideRatio = baseGapRatio / k;
 
 	// Tonsky cap-height vertical offset in em units:
 	const targetCapHeight = target.capHeight || target.unitsPerEm * 0.7;
