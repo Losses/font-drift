@@ -105,9 +105,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		border-bottom: 2px solid #195782;
-		padding-bottom: 12px;
-		margin-bottom: 12px;
+		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 
 	.modal-title {
@@ -163,16 +162,15 @@
 		align-items: center;
 		justify-content: flex-end;
 		gap: 12px;
-		border-top: 2px solid #195782;
-		padding-top: 12px;
-		margin-top: 12px;
+		padding-top: 0;
+		margin-top: 0;
 	}
 
 	.action-btn {
-		padding: 8px 24px;
+		padding: 0.25em 0.5em;
 		font-family: monospace;
 		font-weight: 700;
-		font-size: 12px;
+		font-size: 11px;
 		cursor: pointer;
 		border-radius: 0;
 		transition:
