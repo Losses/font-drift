@@ -66,7 +66,10 @@
 	let alignmentCss = $derived(calculateAlignmentCss(targetFont, baseFont));
 
 	function getSlug(family: string) {
-		return family.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+		return family
+			.toLowerCase()
+			.replace(/[^a-z0-9]+/g, '-')
+			.replace(/^-|-$/g, '');
 	}
 
 	function getBakedGlyphData(fontObj: CustomFont, size: number, displayCharText: string) {
@@ -112,7 +115,8 @@
 			totalAdvanceWidth += adv;
 
 			const pngUrl = `/baked/${slug}/${char}_${closestSize}px.png`;
-			const baselineXInPng = (bakedCanvasWidth / 2 - (rec ? rec.advanceWidth : closestSize) / 2) * scale;
+			const baselineXInPng =
+				(bakedCanvasWidth / 2 - (rec ? rec.advanceWidth : closestSize) / 2) * scale;
 			const baselineYInPng = (bakedCanvasHeight / 2 + closestSize * 0.3) * scale;
 
 			const leftPos = currentX - baselineXInPng;
@@ -148,15 +152,9 @@
 		)
 	);
 
-	let baseRenderData = $derived(
-		getBakedGlyphData(
-			baseFont,
-			fontSize,
-			text
-		)
-	);
+	let baseRenderData = $derived(getBakedGlyphData(baseFont, fontSize, text));
 
-	// Normalized Typographic EM Ratios derived from targetFont table metrics (unitsPerEm)
+	// 100% AUTHENTIC UNTAMPERED RAW TYPOGRAPHIC EM RATIOS (Derived directly from font table unitsPerEm)
 	let upm = $derived(targetFont.unitsPerEm || 1000);
 	let rawAscenderRatio = $derived((targetFont.ascender || 880) / upm);
 	let rawCapHeightRatio = $derived((targetFont.capHeight || 700) / upm);
@@ -182,39 +180,37 @@
 	// Base Baseline Y offset from center
 	let baseBaselineY = $derived(fontSize * (baseBaselineRatioFromTop - 0.5));
 
-	// Target Font Baseline Y offset:
-	// When OVERRIDE is OFF, target baseline is shifted down by Tonsky Shift (cjkOffsetEm)
-	// When OVERRIDE is ON, target baseline is aligned 100% to base baseline (baseBaselineY)
+	// Target Font Baseline Y offset
 	let targetBaselineY = $derived(
-		useMetricOverrides
-			? baseBaselineY
-			: baseBaselineY - alignmentCss.cjkOffsetEm * fontSize
+		useMetricOverrides ? baseBaselineY : baseBaselineY - alignmentCss.cjkOffsetEm * fontSize
 	);
 
 	let ascenderY = $derived(targetBaselineY - realAscenderPx);
 	let capHeightY = $derived(targetBaselineY - realCapHeightPx);
 	let descenderY = $derived(targetBaselineY + realDescenderPx);
 
-	let capsuleWidth = $derived(
-		Math.max(380, Math.max(targetRenderData.totalAdvanceWidth, baseRenderData.totalAdvanceWidth) + 140)
-	);
-	let capsuleHeight = $derived(Math.max(140, fontSize * 2));
+	// ROCK-SOLID UNIFORM CAPSULE CONTAINER DIMENSIONS:
+	// Computed from current fontSize and text length to comfortably fit ALL fonts in the system (including extreme script descenders)
+	// Guaranteed 100% stationary and stable when switching font families (Zero wriggling!)
+	let capsuleWidth = $derived(Math.max(440, Math.ceil(fontSize * text.length * 1.5 + 160)));
+	let capsuleHeight = $derived(Math.max(160, Math.ceil(fontSize * 2.2)));
 
 	let centerX = $derived(containerWidth / 2);
 	let centerY = $derived(containerHeight / 2);
+	let R = $derived(capsuleHeight / 2);
 
 	function getPillIntersectionX(yCoord: number, isLeft: boolean) {
-		const R = capsuleHeight / 2;
 		const dy = Math.max(-R + 0.5, Math.min(R - 0.5, yCoord - centerY));
 		const dx = Math.sqrt(Math.max(0, R * R - dy * dy));
 
 		if (isLeft) {
-			return (centerX - capsuleWidth / 2 + R) - dx;
+			return centerX - capsuleWidth / 2 + R - dx;
 		} else {
-			return (centerX + capsuleWidth / 2 - R) + dx;
+			return centerX + capsuleWidth / 2 - R + dx;
 		}
 	}
 
+	// Reference lines at TRUE physical Y coordinates
 	let yAscender = $derived(centerY + ascenderY);
 	let yCapHeight = $derived(centerY + capHeightY);
 	let yOptical = $derived(centerY);
@@ -264,18 +260,14 @@
 	);
 </script>
 
-<div
-	bind:clientWidth={containerWidth}
-	bind:clientHeight={containerHeight}
-	class="canvas-container"
->
+<div bind:clientWidth={containerWidth} bind:clientHeight={containerHeight} class="canvas-container">
 	{#if useMetricOverrides}
 		<style>
 			{@html alignmentCss.fontFaceCss}
 		</style>
 	{/if}
 
-	<!-- Central Translucent Capsule Preview Container -->
+	<!-- Central Translucent Capsule Preview Container (Uniform & Rock-Solid Dimensional Stability) -->
 	<div
 		class="crystal-capsule capsule-box"
 		style="
@@ -323,7 +315,7 @@
 			{leaderDescender}
 		/>
 
-		<!-- SIDE CALLOUT LABELS (DYNAMICALLY SWITCHES BETWEEN UNCORRECTED & CORRECTED METRICS) -->
+		<!-- SIDE CALLOUT LABELS (100% UNTAMPERED RAW METRICS) -->
 		<div class="callout-wrapper">
 			<SideCalloutCard
 				title="ASCENDER"
@@ -366,12 +358,7 @@
 	{/if}
 
 	<!-- SPECIFICATION CARD COMPONENT -->
-	<SpecificationCard
-		{targetFont}
-		{baseFont}
-		{fontSize}
-		{alignmentCss}
-	/>
+	<SpecificationCard {targetFont} {baseFont} {fontSize} {alignmentCss} />
 </div>
 
 <style>
