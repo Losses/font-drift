@@ -51,6 +51,8 @@ export interface CustomFont {
 	url?: string;
 	arrayBuffer?: ArrayBuffer;
 	isCustom: boolean;
+	/** Ordered local() candidate names (family / preferred family / full / PostScript, all locales) */
+	localNames?: string[];
 	unitsPerEm: number;
 	ascender: number;
 	descender: number;

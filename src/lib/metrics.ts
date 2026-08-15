@@ -7,25 +7,86 @@ const metricsDb = rawDb as MetricsDb;
 export const INITIAL_FALLBACKS: FallbackEntry[] = metricsDb.fallbacks;
 
 /**
- * Default reference base font metrics (PingFang SC Regular / Standard Reference)
+ * Collect ordered local() candidate names from a parsed font's name table.
+ * Handles both opentype.js 2.x (names grouped per platform) and the legacy
+ * flat layout. Order: English family names first (Windows then Macintosh),
+ * then full/PostScript names, then every remaining localized variant.
+ */
+export function collectLocalNames(parsed: opentype.Font): string[] {
+	const NAME_FIELDS = ['fontFamily', 'preferredFamily', 'fullName', 'postScriptName'] as const;
+
+	const names = parsed.names as unknown as Record<
+		string,
+		Record<string, Record<string, string> | undefined> | undefined
+	>;
+	const platforms = [names.windows, names.macintosh];
+
+	const out: string[] = [];
+	const push = (value: string | undefined) => {
+		const trimmed = value?.trim();
+		if (trimmed && !out.includes(trimmed)) out.push(trimmed);
+	};
+
+	for (const field of NAME_FIELDS) {
+		for (const platform of platforms) push(platform?.[field]?.en);
+	}
+	for (const field of NAME_FIELDS) {
+		for (const platform of platforms) {
+			const record = platform?.[field];
+			if (record) for (const value of Object.values(record)) push(value);
+		}
+	}
+
+	return out;
+}
+
+export function findFallbackEntry(family: string): FallbackEntry | undefined {
+	return metricsDb.fallbacks.find((f) => f.family.toLowerCase() === family.toLowerCase());
+}
+
+/**
+ * Convert FallbackEntry from database JSON into CustomFont object
+ */
+export function fallbackToCustomFont(entry: FallbackEntry): CustomFont {
+	const t = entry.tables;
+	const b = entry.browser;
+
+	return {
+		id: `db-${entry.family}`,
+		name: entry.family,
+		family: entry.family,
+		isCustom: false,
+		localNames: entry.local.length > 0 ? [...entry.local] : [entry.family],
+		unitsPerEm: t.unitsPerEm || 1000,
+		ascender: t.os2?.typoAscender ?? t.hhea.ascender ?? 880,
+		descender: t.os2?.typoDescender ?? t.hhea.descender ?? -120,
+		capHeight: Math.round((t.unitsPerEm || 1000) * 0.7),
+		xHeight: Math.round((t.unitsPerEm || 1000) * 0.5),
+		lineGap: t.hhea.lineGap ?? t.os2?.typoLineGap ?? 0,
+		browserAscent: b.ascent,
+		browserDescent: b.descent,
+		browserInkAscent: b.inkAscent,
+		browserInkDescent: b.inkDescent,
+		lineBox: b.lineBox,
+		cjkWidth: b.widths.cjk ? (b.widths.cjk > 200 ? b.widths.cjk / 10 : b.widths.cjk) : 100.0
+	};
+}
+
+const DEFAULT_BASE_FAMILY = 'PingFang SC Regular';
+
+const defaultBaseEntry = findFallbackEntry(DEFAULT_BASE_FAMILY) ?? metricsDb.fallbacks[0];
+
+if (!defaultBaseEntry) {
+	throw new Error('font-metrics.json contains no fallback entries; cannot derive base font');
+}
+
+/**
+ * Default reference base font, always derived from the real measured
+ * database entry (never hardcoded metrics).
  */
 export const DEFAULT_BASE_FONT: CustomFont = {
-	id: 'pingfang-sc-base',
-	name: 'PingFang SC Regular',
-	family: 'PingFang SC Regular',
-	isCustom: false,
-	unitsPerEm: 1000,
-	ascender: 1060,
-	descender: -340,
-	capHeight: 700,
-	xHeight: 500,
-	lineGap: 0,
-	browserAscent: 88,
-	browserDescent: 12,
-	browserInkAscent: 84,
-	browserInkDescent: 26,
-	lineBox: 100, // PingFang SC native lineBox (100% = 1.0em, 0% line gap)
-	cjkWidth: 100.0
+	...fallbackToCustomFont(defaultBaseEntry),
+	id: 'base-default'
 };
 
 /**
@@ -44,12 +105,12 @@ export function measureFontInBrowser(
 } {
 	if (typeof document === 'undefined') {
 		return {
-			ascent: 88,
-			descent: 12,
-			inkAscent: 84,
-			inkDescent: 26,
-			lineBox: 100,
-			cjkWidth: 100.0
+			ascent: DEFAULT_BASE_FONT.browserAscent,
+			descent: DEFAULT_BASE_FONT.browserDescent,
+			inkAscent: DEFAULT_BASE_FONT.browserInkAscent,
+			inkDescent: DEFAULT_BASE_FONT.browserInkDescent,
+			lineBox: DEFAULT_BASE_FONT.lineBox,
+			cjkWidth: DEFAULT_BASE_FONT.cjkWidth
 		};
 	}
 
@@ -67,10 +128,10 @@ export function measureFontInBrowser(
 	const mRef = ctx.measureText(refText);
 	const mChar = ctx.measureText(singleChar);
 
-	const ascent = mRef.fontBoundingBoxAscent || emPx * 0.88;
-	const descent = mRef.fontBoundingBoxDescent || emPx * 0.12;
-	const inkAscent = mChar.actualBoundingBoxAscent || emPx * 0.84;
-	const inkDescent = mChar.actualBoundingBoxDescent || emPx * 0.26;
+	const ascent = mRef.fontBoundingBoxAscent ?? emPx * 0.88;
+	const descent = mRef.fontBoundingBoxDescent ?? emPx * 0.12;
+	const inkAscent = mChar.actualBoundingBoxAscent ?? emPx * 0.84;
+	const inkDescent = mChar.actualBoundingBoxDescent ?? emPx * 0.26;
 
 	// DOM Probe for lineBox height
 	const probe = document.createElement('div');
@@ -79,7 +140,7 @@ export function measureFontInBrowser(
 	probe.style.font = `${emPx}px "${family}", sans-serif`;
 	probe.textContent = refText;
 	document.body.appendChild(probe);
-	const lineBox = probe.getBoundingClientRect().height || ascent + descent;
+	const lineBox = probe.getBoundingClientRect().height ?? ascent + descent;
 	document.body.removeChild(probe);
 
 	return {
@@ -101,11 +162,9 @@ export async function parseUploadedFont(
 	const arrayBuffer = await file.arrayBuffer();
 	const parsed = opentype.parse(arrayBuffer);
 
-	const familyName =
-		parsed.names.fontFamily?.en ||
-		parsed.names.fullName?.en ||
-		parsed.names.postScriptName?.en ||
-		file.name.replace(/\.[^/.]+$/, '');
+	const localNames = collectLocalNames(parsed);
+	const familyName = localNames[0] || file.name.replace(/\.[^/.]+$/, '');
+	const localCandidates = localNames.length > 0 ? localNames : [familyName];
 
 	// Create memory Blob URL so CSS @font-face rules can consume the webfont bytes directly
 	const fontUrl = URL.createObjectURL(file);
@@ -126,6 +185,7 @@ export async function parseUploadedFont(
 		url: fontUrl,
 		arrayBuffer,
 		isCustom: true,
+		localNames: localCandidates,
 		unitsPerEm: parsed.unitsPerEm || 1000,
 		ascender: parsed.tables.os2?.sTypoAscender ?? parsed.ascender ?? 800,
 		descender: parsed.tables.os2?.sTypoDescender ?? parsed.descender ?? -200,
@@ -143,33 +203,6 @@ export async function parseUploadedFont(
 	return { font, fontFace };
 }
 
-/**
- * Convert FallbackEntry from database JSON into CustomFont object
- */
-export function fallbackToCustomFont(entry: FallbackEntry): CustomFont {
-	const t = entry.tables;
-	const b = entry.browser;
-
-	return {
-		id: `db-${entry.family}`,
-		name: entry.family,
-		family: entry.family,
-		isCustom: false,
-		unitsPerEm: t.unitsPerEm || 1000,
-		ascender: t.os2?.typoAscender ?? t.hhea.ascender ?? 880,
-		descender: t.os2?.typoDescender ?? t.hhea.descender ?? -120,
-		capHeight: Math.round((t.unitsPerEm || 1000) * 0.7),
-		xHeight: Math.round((t.unitsPerEm || 1000) * 0.5),
-		lineGap: t.hhea.lineGap ?? t.os2?.typoLineGap ?? 0,
-		browserAscent: b.ascent,
-		browserDescent: b.descent,
-		browserInkAscent: b.inkAscent,
-		browserInkDescent: b.inkDescent,
-		lineBox: b.lineBox,
-		cjkWidth: b.widths.cjk ? (b.widths.cjk > 200 ? b.widths.cjk / 10 : b.widths.cjk) : 100.0
-	};
-}
-
 const pct = (v: number, digits = 4) => `${(v * 100).toFixed(digits)}%`;
 
 /**
@@ -181,7 +214,7 @@ export function calculateAlignmentCss(
 ): GeneratedCssResult {
 	const k = base.cjkWidth > 0 && target.cjkWidth > 0 ? base.cjkWidth / target.cjkWidth : 1.0;
 
-	// Base font native line gap (PingFang SC line gap is 0%)
+	// Base font native line gap in em (measured line box minus ascent and descent)
 	const baseGapRatio = Math.max(0, (base.lineBox - base.browserAscent - base.browserDescent) / 100);
 
 	const sizeAdjustRatio = k;
@@ -199,13 +232,14 @@ export function calculateAlignmentCss(
 		(target.browserInkAscent - target.browserInkDescent) / 200 -
 		(target.browserAscent - target.browserDescent) / 200;
 
-	const fallbackEntry = metricsDb.fallbacks.find(
-		(f) => f.family.toLowerCase() === target.family.toLowerCase()
-	);
-	const localList = fallbackEntry?.local || [target.family];
-	const srcDecl = target.url
-		? `url("${target.url}"), local("${target.family}")`
-		: localList.map((n) => `local("${n}")`).join(', ');
+	const fallbackEntry = findFallbackEntry(target.family);
+
+	// Emit every known local() alias (family / preferred family / full / PostScript,
+	// all locales) because local() matching is platform-specific: a name that resolves
+	// on one OS/font stack may silently fail on another.
+	const localCandidates = [...new Set([target.family, ...(target.localNames ?? [])])];
+	const localSrc = localCandidates.map((n) => `local("${n}")`).join(', ');
+	const srcDecl = target.url ? `url("${target.url}"), ${localSrc}` : localSrc;
 
 	const fallbackFamilyName = `${base.family.replace(/\s+Regular$/i, '')} Fallback ${target.family}`;
 
