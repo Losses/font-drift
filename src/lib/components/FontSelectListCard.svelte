@@ -1,12 +1,15 @@
 <script lang="ts">
+	import { Trash2 } from 'lucide-svelte';
 	import type { CustomFont } from '$lib/types';
 
 	let {
 		fonts = [],
-		onSelectFont = () => {}
+		onSelectFont = () => {},
+		onDeleteFont = () => {}
 	}: {
 		fonts: CustomFont[];
 		onSelectFont: (font: CustomFont) => void;
+		onDeleteFont?: (font: CustomFont) => void;
 	} = $props();
 </script>
 
@@ -14,14 +17,69 @@
 	<div class="card-row-item list-header">SELECT FONT</div>
 	<div class="list-scroll-area">
 		{#each fonts as font (font.id)}
-			<button onclick={() => onSelectFont(font)} class="card-row-item font-select-btn">
-				<span>{font.name}</span>
-			</button>
+			<div class="font-item-row">
+				<button onclick={() => onSelectFont(font)} class="card-row-item font-select-btn">
+					<span>{font.name}</span>
+					{#if font.isCustom}
+						<span class="custom-badge">CUSTOM</span>
+					{/if}
+				</button>
+				{#if font.isCustom}
+					<button
+						onclick={(e) => {
+							e.stopPropagation();
+							onDeleteFont(font);
+						}}
+						class="delete-font-btn"
+						title="Delete custom font"
+					>
+						<Trash2 size={12} color="#ff8a80" />
+					</button>
+				{/if}
+			</div>
 		{/each}
 	</div>
 </div>
 
 <style>
+	.font-item-row {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		border-bottom: 1px solid rgba(219, 232, 248, 0.15);
+	}
+
+	.font-item-row:last-child {
+		border-bottom: none;
+	}
+
+	.delete-font-btn {
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 4px 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0.7;
+		transition: opacity 0.15s ease;
+	}
+
+	.delete-font-btn:hover {
+		opacity: 1;
+	}
+
+	.custom-badge {
+		font-size: 9px;
+		font-weight: 700;
+		background: #a7ffeb;
+		color: #060b19;
+		padding: 1px 4px;
+		border-radius: 2px;
+		letter-spacing: 0.05em;
+		margin-left: 6px;
+	}
+
 	.font-list-card {
 		display: flex;
 		flex-direction: column;
@@ -58,7 +116,7 @@
 	}
 
 	.font-select-btn {
-		width: 100%;
+		flex: 1;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -71,14 +129,9 @@
 		color: #ffffff;
 		font-family: monospace;
 		border: none;
-		border-bottom: 1px solid rgba(219, 232, 248, 0.15);
 		cursor: pointer;
 		line-height: 2;
 		transition: background-color 0.15s ease;
-	}
-
-	.font-select-btn:last-child {
-		border-bottom: none;
 	}
 
 	.font-select-btn:hover {

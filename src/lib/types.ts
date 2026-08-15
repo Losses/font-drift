@@ -102,6 +102,7 @@ export interface BakedCharMetrics {
 		height: number;
 	};
 	dataUrl: string;
+	pngFileName?: string;
 }
 
 export interface BakedResultSet {

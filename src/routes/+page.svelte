@@ -8,6 +8,7 @@
 		DEFAULT_BASE_FONT,
 		parseUploadedFont
 	} from '$lib/metrics';
+	import { bakeFontSet } from '$lib/baker';
 	import { getScreenEdgeRatios } from '$lib/utils';
 
 	import BlueprintCanvas from '$lib/components/BlueprintCanvas.svelte';
@@ -25,10 +26,16 @@
 	let customFonts = $state<CustomFont[]>([]);
 	let allFonts = $derived([...customFonts, ...premeasuredFonts]);
 
-	let baseFont = $state<CustomFont>(DEFAULT_BASE_FONT);
+	let masterManifest = $state<Record<string, any>>({});
 
-	// Target Font starts as NULL (NO PREVIEW UNTIL LOADED/SELECTED!)
+	// Base Font is the user's chosen standard webfont; Target Font is the fallback font candidate
+	let baseFont = $state<CustomFont | null>(null);
 	let targetFont = $state<CustomFont | null>(null);
+
+	let fallbackFonts = $derived.by(() => {
+		const currentBase = baseFont;
+		return currentBase ? allFonts.filter((f) => f.id !== currentBase.id) : premeasuredFonts;
+	});
 
 	// Discrete Font Size (Strictly snaps to BAKED_SIZES steps, no smooth CSS/JS interpolation)
 	let fontSize = $state(64);
@@ -83,7 +90,7 @@
 		});
 	}
 
-	// Mouse tracking effect with discrete font size snapping
+	// Mouse tracking effect: Y-axis steps font size, X-axis slides target fallback font
 	function handleMouseMove(e: MouseEvent) {
 		mouseX = e.clientX;
 		mouseY = e.clientY;
@@ -99,14 +106,48 @@
 		);
 		fontSize = snappedSize;
 
-		// Long Edge -> Font Family Selection (only when target font is selected)
-		if (targetFont && allFonts.length > 0) {
+		// Long Edge -> Slide TARGET fallback font across fallbackFonts while BASE remains fixed
+		if (baseFont && fallbackFonts.length > 0) {
 			const fontIndex = Math.min(
-				allFonts.length - 1,
-				Math.floor(info.longEdgeRatio * allFonts.length)
+				fallbackFonts.length - 1,
+				Math.floor(info.longEdgeRatio * fallbackFonts.length)
 			);
-			targetFont = allFonts[fontIndex];
+			targetFont = fallbackFonts[fontIndex];
 		}
+	}
+
+	function selectBaseFont(font: CustomFont) {
+		baseFont = font;
+		const fallbacks = allFonts.filter((f) => f.id !== font.id);
+		targetFont = fallbacks[0] || premeasuredFonts[0];
+	}
+
+	function deleteCustomFont(fontToDelete: CustomFont) {
+		if (fontToDelete.url) {
+			URL.revokeObjectURL(fontToDelete.url);
+		}
+		if (fontToDelete.family && masterManifest[fontToDelete.family]) {
+			delete masterManifest[fontToDelete.family];
+		}
+		customFonts = customFonts.filter((f) => f.id !== fontToDelete.id);
+		if (baseFont?.id === fontToDelete.id) {
+			baseFont = null;
+			targetFont = null;
+		}
+	}
+
+	function handleReturnToSelection() {
+		customFonts.forEach((font) => {
+			if (font.url) {
+				URL.revokeObjectURL(font.url);
+			}
+			if (font.family && masterManifest[font.family]) {
+				delete masterManifest[font.family];
+			}
+		});
+		customFonts = [];
+		baseFont = null;
+		targetFont = null;
 	}
 
 	async function handleFontFiles(files: FileList | File[]) {
@@ -121,8 +162,25 @@
 				}
 
 				const { font } = await parseUploadedFont(file);
+				const bakedSet = await bakeFontSet(font, BAKED_SIZES, text);
+				masterManifest[font.family] = bakedSet.metrics.map((m) => ({
+					fontFamily: m.fontFamily,
+					char: m.char,
+					fontSize: m.fontSize,
+					advanceWidth: m.advanceWidth,
+					fontBoundingBoxAscent: m.fontBoundingBoxAscent,
+					fontBoundingBoxDescent: m.fontBoundingBoxDescent,
+					actualBoundingBoxAscent: m.actualBoundingBoxAscent,
+					actualBoundingBoxDescent: m.actualBoundingBoxDescent,
+					actualBoundingBoxLeft: m.actualBoundingBoxLeft,
+					actualBoundingBoxRight: m.actualBoundingBoxRight,
+					pixelBox: m.pixelBox,
+					dataUrl: m.dataUrl
+				}));
 				customFonts = [font, ...customFonts];
-				targetFont = font;
+				baseFont = font;
+				const fallbacks = allFonts.filter((f) => f.id !== font.id);
+				targetFont = fallbacks[0] || premeasuredFonts[0];
 			}
 		} catch (err: unknown) {
 			console.error('Failed to parse uploaded font:', err);
@@ -184,13 +242,13 @@
 	<!-- Blueprint Grid Background -->
 	<div class="blueprint-paper-bg"></div>
 
-	{#if targetFont}
+	{#if baseFont && targetFont}
 		<!-- ACTIVE STATE: FONT LOADED & VISUALIZING -->
 		<HeaderBar
 			bind:showBaselines
 			bind:showOverlay
 			bind:useMetricOverrides
-			onReturnToSelection={() => (targetFont = null)}
+			onReturnToSelection={handleReturnToSelection}
 		/>
 
 		<!-- Main Visualizer Area -->
@@ -198,6 +256,7 @@
 			<BlueprintCanvas
 				bind:targetFont
 				bind:baseFont
+				bind:masterManifest
 				{fontSize}
 				{text}
 				{showBaselines}
@@ -219,7 +278,11 @@
 				<DropzoneButton {isDraggingFile} {onFileInputChange} />
 
 				<!-- RIGHT SIDE: FONT LIST CARD COMPONENT -->
-				<FontSelectListCard fonts={premeasuredFonts} onSelectFont={(font) => (targetFont = font)} />
+				<FontSelectListCard
+					fonts={allFonts}
+					onSelectFont={selectBaseFont}
+					onDeleteFont={deleteCustomFont}
+				/>
 			</div>
 		</div>
 	{/if}

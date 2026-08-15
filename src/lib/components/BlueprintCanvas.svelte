@@ -3,6 +3,8 @@
 	import type { CustomFont } from '$lib/types';
 	import { calculateAlignmentCss } from '$lib/metrics';
 
+	import { bakeCharacter } from '$lib/baker';
+
 	import BakedTextureCanvas from './BakedTextureCanvas.svelte';
 	import SvgReferenceOverlay from './SvgReferenceOverlay.svelte';
 	import SideCalloutCard from './SideCalloutCard.svelte';
@@ -25,12 +27,14 @@
 			width: number;
 			height: number;
 		};
-		pngFileName: string;
+		pngFileName?: string;
+		dataUrl?: string;
 	}
 
 	let {
 		targetFont = $bindable<CustomFont>(),
 		baseFont = $bindable<CustomFont>(),
+		masterManifest = $bindable<Record<string, BakedMetrics[]>>({}),
 		fontSize = 64,
 		text = '放轻松',
 		showBaselines = true,
@@ -39,6 +43,7 @@
 	}: {
 		targetFont: CustomFont;
 		baseFont: CustomFont;
+		masterManifest?: Record<string, BakedMetrics[]>;
 		fontSize: number;
 		text: string;
 		showBaselines: boolean;
@@ -48,15 +53,16 @@
 
 	const BAKED_SIZES = [12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72, 80, 96, 108, 120];
 
-	let masterManifest = $state<Record<string, BakedMetrics[]>>({});
 	let containerWidth = $state(1920);
 	let containerHeight = $state(1080);
 
 	onMount(async () => {
 		try {
-			const res = await fetch('/baked/master-manifest.json');
-			if (res.ok) {
-				masterManifest = await res.json();
+			if (Object.keys(masterManifest).length === 0) {
+				const res = await fetch('/baked/master-manifest.json');
+				if (res.ok) {
+					masterManifest = await res.json();
+				}
 			}
 		} catch (e) {
 			console.error('Failed to load master manifest:', e);
@@ -64,6 +70,9 @@
 	});
 
 	let alignmentCss = $derived(calculateAlignmentCss(targetFont, baseFont));
+
+	// Plain JS Map for client-side dynamically baked glyphs (NOT a Svelte $state signal)
+	const clientGlyphCache = new Map<string, BakedMetrics>();
 
 	function getSlug(family: string) {
 		return family
@@ -87,8 +96,6 @@
 			if (matchedKey) {
 				family = matchedKey;
 				records = masterManifest[matchedKey];
-			} else {
-				records = masterManifest['PingFang SC Regular'] || [];
 			}
 		}
 
@@ -109,12 +116,45 @@
 
 		let totalAdvanceWidth = 0;
 		const glyphs = chars.map((char) => {
-			const rec = records.find((r) => r.char === char && r.fontSize === closestSize);
+			let rec = records?.find((r) => r.char === char && r.fontSize === closestSize);
+
+			const cacheKey = `${fontObj.family}:${char}:${closestSize}`;
+			if (!rec) {
+				rec = clientGlyphCache.get(cacheKey);
+			}
+
+			if (!rec && typeof document !== 'undefined') {
+				try {
+					const baked = bakeCharacter(char, closestSize, fontObj.family);
+					rec = {
+						fontFamily: fontObj.family,
+						char: baked.char,
+						fontSize: baked.fontSize,
+						advanceWidth: baked.advanceWidth,
+						fontBoundingBoxAscent: baked.fontBoundingBoxAscent,
+						fontBoundingBoxDescent: baked.fontBoundingBoxDescent,
+						actualBoundingBoxAscent: baked.actualBoundingBoxAscent,
+						actualBoundingBoxDescent: baked.actualBoundingBoxDescent,
+						actualBoundingBoxLeft: baked.actualBoundingBoxLeft,
+						actualBoundingBoxRight: baked.actualBoundingBoxRight,
+						pixelBox: baked.pixelBox,
+						dataUrl: baked.dataUrl
+					};
+					// Store in plain JS Map (not Svelte $state) to avoid state_unsafe_mutation error
+					clientGlyphCache.set(cacheKey, rec);
+				} catch (e) {
+					console.warn(`Failed on-the-fly baking for '${char}' @ ${closestSize}px:`, e);
+				}
+			}
+
 			const adv = rec ? rec.advanceWidth * scale : size * scale;
 			const currentX = totalAdvanceWidth;
 			totalAdvanceWidth += adv;
 
-			const pngUrl = `/baked/${slug}/${char}_${closestSize}px.png`;
+			const pngUrl = rec?.dataUrl
+				? rec.dataUrl
+				: `/baked/${slug}/${rec?.pngFileName || `${char}_${closestSize}px.png`}`;
+
 			const baselineXInPng =
 				(bakedCanvasWidth / 2 - (rec ? rec.advanceWidth : closestSize) / 2) * scale;
 			const baselineYInPng = (bakedCanvasHeight / 2 + closestSize * 0.3) * scale;

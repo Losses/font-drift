@@ -115,6 +115,15 @@ export async function bakeFontSet(
 	text: string = BAKE_TEXT,
 	onProgress?: (percent: number, currentLabel: string) => void
 ): Promise<BakedResultSet> {
+	if (typeof document !== 'undefined' && document.fonts) {
+		try {
+			await document.fonts.load(`100px "${font.family}"`);
+			await document.fonts.ready;
+		} catch (e) {
+			console.warn(`Font load check warning for ${font.family}:`, e);
+		}
+	}
+
 	const chars = text.split('');
 	const totalSteps = sizes.length * chars.length;
 	let currentStep = 0;
